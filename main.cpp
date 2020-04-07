@@ -46,6 +46,10 @@ int main() {
 }
 
 
+
+
+
+
 /**
  *  Función dedicada a dibujar cada frame. Acá adentro se debe poner la logica necesaria para representar un nuevo frame
  *  del juego.
