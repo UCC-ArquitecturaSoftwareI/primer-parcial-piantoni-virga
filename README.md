@@ -1,7 +1,7 @@
 ![Build and Deploy][badge]
 # PLATAFORMA
 
-##Integrantes
+## Integrantes
 
 **Piantoni Francisco y Virga Santos Jose**
 
