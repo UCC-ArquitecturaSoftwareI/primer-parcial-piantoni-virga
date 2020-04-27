@@ -8,14 +8,19 @@
 
 
 class Nave {
+
+protected:
     Texture2D nave;
     Vector2 nave_pos;
+
 public:
-    Nave(std::string text, const Vector2 &navePos);
+    Nave(std::string text,const Vector2 &navePos);
 
     void draw();
     void move_x(float d);
     void move_y(float d);
+
+    const Vector2 &getNavePos() const;
 };
 
 
