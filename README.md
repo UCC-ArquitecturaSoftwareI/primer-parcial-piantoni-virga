@@ -1,12 +1,16 @@
 ![Build and Deploy][badge]
 # PLATAFORMA
 
-##Integrantes
+## Integrantes
 
 **Piantoni Francisco y Virga Santos Jose**
 
 Este proyecto es una plantilla básica para crear proyectos en Raylib. Incluye github actions
 para deployear la versión HTML5 del juego en gh-pages del mismo repositorio.
+
+**Descripcion**
+
+Para este proyecto decidimos realizar un juego de tipo **Shooter**, especificamente un juego como  el **Space Invaders**.
 
 Se puede ver desde: [Github Pages][gh-pages]
 
