@@ -1,5 +1,5 @@
 //
-// Created by santo on 25/4/2020.
+// Created by santos on 25/4/2020.
 //
 
 
@@ -25,6 +25,12 @@ void Bala::move_y(float d) {
 
 void Bala::setBalaPos(const Vector2 &balaPos) {
     bala_pos = balaPos;
+}
+void Bala::EliminarBala(const float a, const float b) {
+    if(bala_pos.y > a or bala_pos.x >b ){
+
+    }
+
 }
 
 

@@ -24,7 +24,7 @@ public:
     void move_x(float d);
     void move_y(float d);
     void setBalaPos(const Vector2 &balaPos);
-
+    void EliminarBala(const float a , const float b);
 
 };
 

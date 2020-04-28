@@ -8,8 +8,8 @@
 #if defined(PLATFORM_WEB) // Para crear HTML5
 #include <emscripten/emscripten.h>
 #endif
-const int screenWidth = 800;
-const int screenHeight = 450;
+const float screenWidth = 800;
+const float screenHeight = 450;
 
 // Variables Globales
 Music music;
@@ -29,8 +29,8 @@ int main() {
     music = LoadMusicStream("resources/Cyberpunk Moonlight Sonata.mp3");
 
     PlayMusicStream(music);
-    player = new Nave("resources/ship.png", Vector2{screenWidth / 2, screenHeight / 2});
-    disparo = new Bala("resources/ship.png", Vector2{screenWidth / 2, screenHeight / 2});
+    player = new Nave("resources/ship.png", Vector2{screenWidth / 2, screenHeight -45});
+    disparo = new Bala("resources/ship.png", Vector2{screenWidth / 2, screenHeight -45});
 
 
 #if defined(PLATFORM_WEB)  // Para versión Web.
@@ -68,28 +68,24 @@ static void UpdateDrawFrame(void) {
 
     // Verifico Entradas de eventos.
     if (IsKeyDown(KEY_RIGHT)){
-        player->move_x(2.0f);
+        player->move_x(25.0f);
+        disparo->move_x(25.0f);
 
     }
     if (IsKeyDown(KEY_LEFT)){
-
-        player->move_x(-2.0f);
-    }
-    if (IsKeyDown(KEY_UP)) {
-
-        player->move_y(-2.0f);
+        disparo->move_x(-25.0f);
+        player->move_x(-25.0f);
     }
 
-    if (IsKeyDown(KEY_DOWN)){
 
-        player->move_y(2.0f);
-    }
+    if (IsKeyDown(KEY_SPACE)){
+            //disparo->setBalaPos(player->getNavePos());
+            disparo->draw();
+            disparo->move_y(-10.0f);
+            disparo->EliminarBala(screenHeight, screenWidth);
 
-     if (IsKeyDown(KEY_SPACE)){
-        disparo->setBalaPos(player->getNavePos());
-        disparo->draw();
-        disparo->move_y(-10.0f);
-    }
+        }
+
 
     if (IsKeyDown(KEY_ESCAPE)){
         EndDrawing();
@@ -98,10 +94,24 @@ static void UpdateDrawFrame(void) {
     // Comienzo a dibujar
     BeginDrawing();
 
+
     ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
 
     // Dibujo todos los elementos del juego.
+
     player->draw();
+
+    /*while(IsKeyDown(!KEY_ESCAPE)){
+
+        if (IsKeyDown(KEY_SPACE)){
+            //disparo->setBalaPos(player->getNavePos());
+            disparo->draw();
+            disparo->move_y(-10.0f);
+            disparo->EliminarBala(screenHeight, screenWidth);
+
+        }
+    }*/
+
     DrawText("ESCAPE PARA SALIR ", 20, 20, 40, LIGHTGRAY);
 
     // Finalizo el dibujado
