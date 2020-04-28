@@ -26,6 +26,7 @@ public:
     void setBalaPos(const Vector2 &balaPos);
     void EliminarBala(const float a , const float b);
 
+    const Vector2 &getBalaPos() const;
 };
 
 

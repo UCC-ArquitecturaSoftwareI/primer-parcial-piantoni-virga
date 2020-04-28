@@ -33,4 +33,8 @@ void Bala::EliminarBala(const float a, const float b) {
 
 }
 
+const Vector2 &Bala::getBalaPos() const {
+    return bala_pos;
+}
+
 
