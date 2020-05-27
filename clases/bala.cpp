@@ -6,35 +6,7 @@
 #include <string>
 #include "bala.h"
 
-
-Bala::Bala(std::string text, const Vector2 &balaPos) : bala_pos(balaPos) {
-    bala = LoadTexture(text.c_str());
+void Bala::moveposition() {
+    position.x+30;
+    position.y+30;
 }
-
-void Bala::draw() {
-
-    DrawTexture(bala , bala_pos.x - bala.width/2, bala_pos.y- bala.height/2, WHITE);
-}
-
-void Bala::move_x(float d) {
-    bala_pos.x += d;
-}
-void Bala::move_y(float d) {
-    bala_pos.y += d;
-}
-
-void Bala::setBalaPos(const Vector2 &balaPos) {
-    bala_pos = balaPos;
-}
-void Bala::EliminarBala(const float a, const float b) {
-    if(bala_pos.y > a or bala_pos.x >b ){
-
-    }
-
-}
-
-const Vector2 &Bala::getBalaPos() const {
-    return bala_pos;
-}
-
-

@@ -1,124 +1,116 @@
 #include <raylib.h>
 #include <vector>
-
-
-#include "clases/Nave.h"
+#include <iostream>
 #include "clases/bala.h"
+#include "clases/Nave.h"
 
 
-#if defined(PLATFORM_WEB) // Para crear HTML5
-#include <emscripten/emscripten.h>
-#endif
-const float screenWidth = 800;
-const float screenHeight = 450;
 
-// Variables Globales
-Music music;
-Nave *player;
-Bala *disparo;
+int main(){
+    const int MAXDISPAROS=5;
+    const int WindowWidth = 1280;
+    const int WindowHeigh = 720;
+    Nave* jugador;
+    InitWindow(WindowWidth, WindowHeigh, "EL JUEGO");
 
-static void UpdateDrawFrame(void);          // Función dedicada a operar cada frame
+    SetTargetFPS(60);
+    float x = 32.0f, y=32.0f;
 
-int main() {
-    int c;
-    c = 10; //cantidad de disparos
-    // Inicialización de la ventana
-    InitWindow(screenWidth, screenHeight, "raylib template - advance game");
-    InitAudioDevice();              // Initialize audio device
+    //Inicializacion de disparos
 
-    /// Ejemplo de utilización de audio.
-    music = LoadMusicStream("resources/Cyberpunk Moonlight Sonata.mp3");
+    Bala disparo[MAXDISPAROS];
+     jugador= new  Nave ( "resources/ship.png" , Vector2 {WindowWidth / 2 ,WindowHeigh - 45 });
 
-    PlayMusicStream(music);
-    player = new Nave("resources/ship.png", Vector2{screenWidth / 2, screenHeight - 45});
-    disparo = new Bala("resources/ship.png", Vector2{screenWidth / 2, screenHeight - 45});
+    for (int i=0; i<MAXDISPAROS; i++) {
 
-
-#if defined(PLATFORM_WEB)  // Para versión Web.
-    emscripten_set_main_loop(UpdateDrawFrame, 0, 1);
-#else
-    SetTargetFPS(60);   // Set our game to run at 60 frames-per-second
-    // Main loop
-    while (!WindowShouldClose()) {
-        UpdateDrawFrame();
-    }
-#endif
-
-
-    // Descargar todos los resources cargados
-
-    UnloadMusicStream(music);   // Descargo la musica de RAM
-    CloseAudioDevice();         // Cierro el dispositivo de Audio
-    CloseWindow();              // Cierro la ventana
-    return 0;
-}
-
-
-/**
- *  Función dedicada a dibujar cada frame. Acá adentro se debe poner la logica necesaria para representar un nuevo frame
- *  del juego.
- */
-static void UpdateDrawFrame(void) {
-
-    static std::vector<Bala *> conjuntoDeBalas;
-
-    // siempre hay que reproducir la musica que esta actualmente
-    // UpdateMusicStream(music);
-
-    // Verifico Entradas de eventos.
-    if (IsKeyDown(KEY_RIGHT)) {
-        player->move_x(25.0f);
-        disparo->move_x(25.0f);
+        disparo[i].position = jugador->getNavePos();
+        disparo[i].radio = 10;
+        disparo[i].color = WHITE;
+        disparo[i].activo = false;
+        disparo[i].Lifespown = 0;
 
     }
-    if (IsKeyDown(KEY_LEFT)) {
-        disparo->move_x(-25.0f);
-        player->move_x(-25.0f);
-    }
 
 
-    if (IsKeyDown(KEY_SPACE)) {
-        Bala *bali = new Bala("resources/ship.png", player->getNavePos());
-        conjuntoDeBalas.push_back(bali);
-    }
+    while (!WindowShouldClose()){
+        if ( IsKeyDown (KEY_RIGHT)) {
+            jugador-> move_x ( 25.0f );
 
-    if (IsKeyDown(KEY_ESCAPE)) {
-        EndDrawing();
-    };
 
-    // Verificaciones
-
-    //disparo->draw();
-    for (auto it = conjuntoDeBalas.begin(); it != conjuntoDeBalas.end(); it++) {
-        (*it)->move_y(-10.0f);
-        if ((*it)->getBalaPos().y <= 0) {
-            delete (*it);
-            conjuntoDeBalas.erase(it);
         }
+        if ( IsKeyDown (KEY_LEFT)) {
+
+            jugador-> move_x ( -25.0f );
+        }
+
+
+
+
+        BeginDrawing();
+
+             ClearBackground(BLACK);
+
+
+
+        //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA
+            if (IsKeyPressed(KEY_SPACE))
+            {
+                for (int i = 0; i < MAXDISPAROS; i++){
+
+                    if (!disparo[i].activo) {
+                        disparo[i].position = jugador->getNavePos();
+
+                        disparo[i].activo = true;
+                        break;
+                    }
+                }
+            }
+
+            // Otro "for" para todas las cosas que tenga que hacer la bala cuando activo = true;
+            for (int i=0; i<MAXDISPAROS; i++) {
+                if (disparo[i].activo) {
+                    disparo[i].position.y -= 10;
+
+                    disparo[i].Lifespown++;
+
+                    if (disparo[i].position.y > 800) {
+                        disparo[i].activo = false;
+                    }
+
+                    if (disparo[i].activo) {
+                        DrawCircleV(disparo[i].position, disparo[i].radio, WHITE);
+
+                    }
+
+                    //cuan lejos puede llegar la bala hasta ser desactivada
+
+                    if (disparo[i].Lifespown >= 80) {
+                        disparo[i].position = jugador->getNavePos();
+                        disparo[i].Lifespown = 0;
+                        disparo[i].activo = false;
+
+                    }
+
+                }
+
+            }
+
+
+
+              static float rotation = 0.5f;
+               rotation ++;
+               DrawRectangle(x,y,100,300, RED);
+               DrawRectangleV(Vector2{300,200}, Vector2{100,30}, BLACK);
+               DrawRectanglePro(Rectangle{200,200,100,100}, Vector2{50,50}, rotation, GREEN);
+             jugador->draw();
+             DrawCircle(400,300,64, ORANGE);
+             DrawTriangle(Vector2{50,0}, Vector2{0,100}, Vector2{100,100}, YELLOW);
+
+             EndDrawing();
+
+
     }
 
-    if(player->getNavePos().x > screenWidth){
-       // player->setNavePos().x = screenWidth;
-    }
 
 
-    // Comienzo a dibujar
-    BeginDrawing();
-
-
-    ClearBackground(RAYWHITE); // Limpio la pantalla con blanco
-
-    //disparo->draw();
-    for (auto b: conjuntoDeBalas) {
-        b->draw();
-    }
-
-    // Dibujo todos los elementos del juego.
-
-    player->draw();
-
-    DrawText("ESCAPE PARA SALIR ", 20, 20, 40, LIGHTGRAY);
-
-    // Finalizo el dibujado
-    EndDrawing();
 }

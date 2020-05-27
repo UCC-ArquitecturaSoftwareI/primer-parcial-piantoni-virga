@@ -12,22 +12,23 @@
 
 
 class Bala {
-
-    Texture2D bala;
-    Vector2 bala_pos;
-
-
 public:
-    Bala(std::string text,  const Vector2 &balaPos) ;
-
-    void draw();
-    void move_x(float d);
-    void move_y(float d);
-    void setBalaPos(const Vector2 &balaPos);
-    void EliminarBala(const float a , const float b);
-
-    const Vector2 &getBalaPos() const;
+    bool activo;
+    Color color;
+    Vector2 position;
+    int Lifespown;
+    float radio;
+    void moveposition();
+    void acelerar();
 };
 
 
 #endif //RAYLIBTEMPLATE_BALA_H
+
+
+/*void move_x(float d);
+void move_y(float d);
+void setBalaPos(const Vector2 &balaPos);
+void EliminarBala(const float a , const float b);
+
+const Vector2 &getBalaPos() const;*/

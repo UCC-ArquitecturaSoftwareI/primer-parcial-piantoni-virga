@@ -25,3 +25,5 @@ void Nave::move_y(float d) {
 const Vector2 &Nave::getNavePos() const {
     return nave_pos;
 }
+
+
