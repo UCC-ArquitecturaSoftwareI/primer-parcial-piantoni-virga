@@ -21,8 +21,8 @@ Mapa::Mapa(std::string file) {
         }
 
         auto objs = map.getLayer("Objetos");
-        tson::Object *player = objs->firstObj("Player");
-        player_init_pos.x = player->getPosition().x;  //std::cout<<"Llegue aca"<<std::endl; ACA ESTA EL ERROR
+        tson::Object *player = objs->firstObj("player");
+        player_init_pos.x = player->getPosition().x;
         player_init_pos.y = player->getPosition().y;
 
         for (auto &obj : objs->getObjects()) {

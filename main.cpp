@@ -13,8 +13,8 @@ Nave *player;
 
 int main(){
     const int MAXDISPAROS=5;
-    const int WindowWidth = 1280;
-    const int WindowHeigh = 720;
+    const int WindowWidth = 820;
+    const int WindowHeigh = 840;
     //Nave* jugador;
     InitWindow(WindowWidth, WindowHeigh, "EL JUEGO");
 
