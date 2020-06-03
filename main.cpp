@@ -5,6 +5,7 @@
 #include "clases/Nave.h"
 #include "clases/mapa.h"
 
+
 //Variables globales
 Mapa *mapa;
 Nave *player;
@@ -25,6 +26,9 @@ int main(){
 
     player = new Nave ("resources/ship.png", mapa->player_init_pos);
 
+
+    //Preguntar al profe como hacer que me compare el valor con &vector2 de nave pos
+    Nave pnave(86.0, 78.0);
 
 
     //Inicializacion de disparos
@@ -86,10 +90,10 @@ int main(){
         /* ARREGLAR EL SETTER Y EL GETTER PARA QUE NOS DE UN ANCHO Y SE LO PODAMOS PASAR, TAMBIEN VER LO DE NAVEPOS
             set y getter
              Colision de la nave con los bordes de la pantalla
-
-            if ((player->getNavePos().x + tamano.getwidht()) >= GetScreenWidth()) player->getNavePos().x = GetScreenWidth() - tamano.getwidht();
-            else if (player->getNavePos().x <= 0) player->getNavePos().x = 0;
         */
+            if ((player->nave_pos.x=0 +  pnave.getWidth()) >= GetScreenWidth()) player->nave_pos.x = GetScreenWidth() -  pnave.getWidth();
+            else if (player->getNavePos().x <= 0) player->nave_pos.x=0;
+
 
 
         // Otro "for" para todas las cosas que tenga que hacer la bala cuando activo = true;

@@ -9,34 +9,41 @@
 
  class Nave {
 
+    /**/
+ private:
+    double length;
+    double width;
+
 
  protected:
      Texture2D nave;
-     Vector2 nave_pos;
 
-     /*
- private:
-     int widht;
-    */
+
  public:
      Nave(std::string text,const Vector2 &navePos);
 
-     /*
-       void setwidth (int w) {
-         widht = w;
-     }
+    /**/
+    Nave (double, double);
+    double getLength() const;
+    double getWidth() const;
 
-     void getwidht () {
-         return widht;
-     }
-      */
 
      void draw();
      void move_x(float d);
      void move_y(float d);
 
      const Vector2 &getNavePos() const;
+
+     Vector2 nave_pos;
  };
+    /**/
+    Nave::Nave(double l , double w=0) {
+        length = l;
+        width = w;
+    }
+
+ double Nave::getWidth() const { return width; }
+ double Nave::getLength() const { return length; }
 
 
 #endif //RAYLIBTEMPLATE_NAVE_H

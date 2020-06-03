@@ -29,18 +29,18 @@
                 {
                  "height":836.17747440273,
                  "id":7,
-                 "name":"Borde",
-                 "rotation":0,
+                 "name":"BordeI",
+                 "rotation":180,
                  "type":"",
                  "visible":true,
-                 "width":67.1217292377702,
-                 "x":1.13765642775882,
-                 "y":2.27531285551763
+                 "width":0,
+                 "x":70.1612254513278,
+                 "y":837.292147872353
                 }, 
                 {
                  "height":63.7087599544937,
                  "id":8,
-                 "name":"Borde",
+                 "name":"Bordea",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -51,7 +51,7 @@
                 {
                  "height":769.05574516496,
                  "id":9,
-                 "name":"Borde",
+                 "name":"Borded",
                  "rotation":0,
                  "type":"",
                  "visible":true,
