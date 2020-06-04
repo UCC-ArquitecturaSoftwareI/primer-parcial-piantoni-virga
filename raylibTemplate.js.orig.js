@@ -195,7 +195,7 @@ Module['FS_createPath']('/resources', 'Map', true, true);
   }
 
  }
- loadPackage({"files": [{"start": 0, "audio": 0, "end": 6148, "filename": "/resources/.DS_Store"}, {"start": 6148, "audio": 1, "end": 2345068, "filename": "/resources/Cyberpunk Moonlight Sonata.mp3"}, {"start": 2345068, "audio": 0, "end": 2355761, "filename": "/resources/shell.html"}, {"start": 2355761, "audio": 0, "end": 2357718, "filename": "/resources/ship.png"}, {"start": 2357718, "audio": 0, "end": 2360894, "filename": "/resources/Map/mapa.json"}, {"start": 2360894, "audio": 0, "end": 2482891, "filename": "/resources/Map/platformIndustrial_sheet@2.png"}], "remote_package_size": 2482891, "package_uuid": "3dff9cae-db36-4e59-b540-8fa38cedc5e2"});
+ loadPackage({"files": [{"start": 0, "audio": 0, "end": 6148, "filename": "/resources/.DS_Store"}, {"start": 6148, "audio": 1, "end": 2345068, "filename": "/resources/Cyberpunk Moonlight Sonata.mp3"}, {"start": 2345068, "audio": 0, "end": 2355761, "filename": "/resources/shell.html"}, {"start": 2355761, "audio": 0, "end": 2357718, "filename": "/resources/ship.png"}, {"start": 2357718, "audio": 0, "end": 2360884, "filename": "/resources/Map/mapa.json"}, {"start": 2360884, "audio": 0, "end": 2482881, "filename": "/resources/Map/platformIndustrial_sheet@2.png"}], "remote_package_size": 2482881, "package_uuid": "6caf157f-37fd-42d5-8b0f-3213ee9689cf"});
 
 })();
 
@@ -36688,6 +36688,8 @@ function __ZNSt3__220__get_up_to_n_digitsIwNS_19istreambuf_iteratorIwNS_11char_t
 }
 
 function __emscripten_dceable_type_decls() {
+ _emscripten_glTexParameterfv(0, 0, 0);
+ _emscripten_glTexParameteri(0, 0, 0);
  _emscripten_glTexParameteriv(0, 0, 0);
  _emscripten_glTexSubImage2D(0, 0, 0, 0, 0, 0, 0, 0, 0);
  _emscripten_glUniform1f(0, Math_fround(0.0));
@@ -36847,8 +36849,6 @@ function __emscripten_dceable_type_decls() {
  _emscripten_glStencilOpSeparate(0, 0, 0, 0);
  _emscripten_glTexImage2D(0, 0, 0, 0, 0, 0, 0, 0, 0);
  _emscripten_glTexParameterf(0, 0, Math_fround(0.0));
- _emscripten_glTexParameterfv(0, 0, 0);
- _emscripten_glTexParameteri(0, 0, 0);
 }
 
 function __ZNK10__cxxabiv121__vmi_class_type_info16search_below_dstEPNS_19__dynamic_cast_infoEPKvib($this, $info, $current_ptr, $path_below, $use_strcmp) {
@@ -39612,6 +39612,138 @@ function __ZN8nlohmann6detail28json_sax_dom_callback_parserINS_10basic_jsonINSt3
  return;
 }
 
+function _main() {
+ var $18 = 0, $2 = 0, $23 = 0, $24 = 0, $36 = 0, $37 = 0, $42 = 0, $43 = 0, $47 = f0, $49 = 0, $54 = 0, $55 = 0, $7 = 0, $8 = 0, $Lifespown79 = 0, $activo33 = 0, $activo71 = 0, $add = 0.0, $agg$tmp = 0, $agg$tmp4 = 0, $agg$tmp93 = 0, $agg$tmp98 = 0, $call = 0, $call3 = 0, $conv = 0.0, $conv52 = 0.0, $conv54 = f0, $disparo = 0, $i$044 = 0, $i27$041 = 0, $i65$042 = 0, $inc42 = 0, $mapa = 0, $player = 0, $pnave = 0, $position75 = 0, $ref$tmp$sroa$0$0$$sroa_idx = 0, $sub77 = f0, $tmpcast$byval_copy = 0, $tmpcast48$byval_copy = 0, $x58 = 0, $y76 = 0, sp = 0, CSE$0 = 0, CSE$1 = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 240 | 0;
+ if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(240);
+ $tmpcast48$byval_copy = sp + 224 | 0;
+ $tmpcast$byval_copy = sp + 216 | 0;
+ $player = sp + 208 | 0;
+ HEAP32[$player >> 2] = 0;
+ $mapa = sp + 204 | 0;
+ HEAP32[$mapa >> 2] = 0;
+ $agg$tmp = sp + 192 | 0;
+ $agg$tmp4 = sp + 180 | 0;
+ $pnave = sp + 128 | 0;
+ $disparo = sp;
+ $agg$tmp93 = sp + 120 | 0;
+ $agg$tmp98 = sp + 176 | 0;
+ _InitWindow(820, 840, 21908);
+ _SetTargetFPS(60);
+ $call = __Znwm(220) | 0;
+ HEAP32[$agg$tmp >> 2] = 0;
+ HEAP32[$agg$tmp + 4 >> 2] = 0;
+ HEAP32[$agg$tmp + 8 >> 2] = 0;
+ __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__initEPKcm($agg$tmp, 21917, __ZNSt3__211char_traitsIcE6lengthEPKc(21917) | 0);
+ __ZN4MapaC2ENSt3__212basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE($call, $agg$tmp);
+ HEAP32[$mapa >> 2] = $call;
+ __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($agg$tmp);
+ $call3 = __Znwm(48) | 0;
+ HEAP32[$agg$tmp4 >> 2] = 0;
+ HEAP32[$agg$tmp4 + 4 >> 2] = 0;
+ HEAP32[$agg$tmp4 + 8 >> 2] = 0;
+ __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__initEPKcm($agg$tmp4, 21944, __ZNSt3__211char_traitsIcE6lengthEPKc(21944) | 0);
+ __ZN4NaveC2ENSt3__212basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERK7Vector2($call3, $agg$tmp4, (HEAP32[$mapa >> 2] | 0) + 212 | 0);
+ HEAP32[$player >> 2] = $call3;
+ __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($agg$tmp4);
+ __ZN4NaveC2Edd($pnave, 86.0, 78.0);
+ $i$044 = 0;
+ do {
+  $2 = __ZNK4Nave10getNavePosEv(HEAP32[$player >> 2] | 0) | 0;
+  $7 = HEAP32[$2 + 4 >> 2] | 0;
+  CSE$0 = $disparo + ($i$044 * 24 | 0) | 0;
+  $8 = CSE$0 + 8 | 0;
+  HEAP32[$8 >> 2] = HEAP32[$2 >> 2];
+  HEAP32[$8 + 4 >> 2] = $7;
+  HEAPF32[CSE$0 + 20 >> 2] = Math_fround(10.0);
+  $ref$tmp$sroa$0$0$$sroa_idx = CSE$0 + 1 | 0;
+  HEAP8[$ref$tmp$sroa$0$0$$sroa_idx >> 0] = -1;
+  HEAP8[$ref$tmp$sroa$0$0$$sroa_idx + 1 >> 0] = -1 >> 8;
+  HEAP8[$ref$tmp$sroa$0$0$$sroa_idx + 2 >> 0] = -1 >> 16;
+  HEAP8[$ref$tmp$sroa$0$0$$sroa_idx + 3 >> 0] = -1 >> 24;
+  HEAP8[CSE$0 >> 0] = 0;
+  HEAP32[CSE$0 + 16 >> 2] = 0;
+  $i$044 = $i$044 + 1 | 0;
+ } while (($i$044 | 0) != 5);
+ if (!(_WindowShouldClose() | 0)) do {
+  if (_IsKeyDown(262) | 0) __ZN4Nave6move_xEf(HEAP32[$player >> 2] | 0, Math_fround(25.0));
+  if (_IsKeyDown(263) | 0) __ZN4Nave6move_xEf(HEAP32[$player >> 2] | 0, Math_fround(-25.0));
+  _BeginDrawing();
+  __ZN4Mapa7dibujarEv(HEAP32[$mapa >> 2] | 0);
+  __ZN4Nave4drawEv(HEAP32[$player >> 2] | 0);
+  L14 : do if (_IsKeyPressed(32) | 0) {
+   $i27$041 = 0;
+   while (1) {
+    $activo33 = $disparo + ($i27$041 * 24 | 0) | 0;
+    if (!(HEAP8[$activo33 >> 0] | 0)) break;
+    $inc42 = $i27$041 + 1 | 0;
+    if ($inc42 >>> 0 < 5) $i27$041 = $inc42; else break L14;
+   }
+   $18 = __ZNK4Nave10getNavePosEv(HEAP32[$player >> 2] | 0) | 0;
+   $23 = HEAP32[$18 + 4 >> 2] | 0;
+   $24 = $disparo + ($i27$041 * 24 | 0) + 8 | 0;
+   HEAP32[$24 >> 2] = HEAP32[$18 >> 2];
+   HEAP32[$24 + 4 >> 2] = $23;
+   HEAP8[$activo33 >> 0] = 1;
+  } while (0);
+  $conv = +Math_fround(HEAPF32[(HEAP32[$player >> 2] | 0) + 36 >> 2]);
+  $add = +__ZNK4Nave8getWidthEv($pnave) + $conv;
+  if (!($add >= +(_GetScreenWidth() | 0))) {
+   $x58 = (HEAP32[$player >> 2] | 0) + 36 | 0;
+   if (Math_fround(HEAPF32[$x58 >> 2]) <= Math_fround(70.0)) HEAPF32[$x58 >> 2] = Math_fround(70.0);
+  } else {
+   $conv52 = +(_GetScreenWidth() | 0);
+   $conv54 = Math_fround($conv52 - +__ZNK4Nave8getWidthEv($pnave));
+   HEAPF32[(HEAP32[$player >> 2] | 0) + 36 >> 2] = $conv54;
+  }
+  $i65$042 = 0;
+  do {
+   $activo71 = $disparo + ($i65$042 * 24 | 0) | 0;
+   if (HEAP8[$activo71 >> 0] | 0) {
+    CSE$1 = $disparo + ($i65$042 * 24 | 0) | 0;
+    $position75 = CSE$1 + 8 | 0;
+    $y76 = CSE$1 + 12 | 0;
+    $sub77 = Math_fround(Math_fround(HEAPF32[$y76 >> 2]) + Math_fround(-10.0));
+    HEAPF32[$y76 >> 2] = $sub77;
+    $Lifespown79 = CSE$1 + 16 | 0;
+    $36 = HEAP32[$Lifespown79 >> 2] | 0;
+    HEAP32[$Lifespown79 >> 2] = $36 + 1;
+    if ($sub77 > Math_fround(800.0)) HEAP8[$activo71 >> 0] = 0; else {
+     $37 = $position75;
+     $42 = HEAP32[$37 + 4 >> 2] | 0;
+     $43 = $agg$tmp93;
+     HEAP32[$43 >> 2] = HEAP32[$37 >> 2];
+     HEAP32[$43 + 4 >> 2] = $42;
+     $47 = Math_fround(HEAPF32[$disparo + ($i65$042 * 24 | 0) + 20 >> 2]);
+     HEAP32[$agg$tmp98 >> 2] = -1;
+     HEAP32[$tmpcast$byval_copy >> 2] = HEAP32[$agg$tmp93 >> 2];
+     HEAP32[$tmpcast$byval_copy + 4 >> 2] = HEAP32[$agg$tmp93 + 4 >> 2];
+     HEAP8[$tmpcast48$byval_copy >> 0] = HEAP8[$agg$tmp98 >> 0] | 0;
+     HEAP8[$tmpcast48$byval_copy + 1 >> 0] = HEAP8[$agg$tmp98 + 1 >> 0] | 0;
+     HEAP8[$tmpcast48$byval_copy + 2 >> 0] = HEAP8[$agg$tmp98 + 2 >> 0] | 0;
+     HEAP8[$tmpcast48$byval_copy + 3 >> 0] = HEAP8[$agg$tmp98 + 3 >> 0] | 0;
+     _DrawCircleV($tmpcast$byval_copy, $47, $tmpcast48$byval_copy);
+    }
+    if (($36 | 0) > 78) {
+     $49 = __ZNK4Nave10getNavePosEv(HEAP32[$player >> 2] | 0) | 0;
+     $54 = HEAP32[$49 + 4 >> 2] | 0;
+     $55 = $position75;
+     HEAP32[$55 >> 2] = HEAP32[$49 >> 2];
+     HEAP32[$55 + 4 >> 2] = $54;
+     HEAP32[$Lifespown79 >> 2] = 0;
+     HEAP8[$activo71 >> 0] = 0;
+    }
+   }
+   $i65$042 = $i65$042 + 1 | 0;
+  } while (($i65$042 | 0) != 5);
+  HEAPF32[4356] = Math_fround(Math_fround(HEAPF32[4356]) + Math_fround(1.0));
+  _EndDrawing();
+ } while (!(_WindowShouldClose() | 0));
+ STACKTOP = sp;
+ return 0;
+}
+
 function _GifWriteLzwImage($f, $image, $left, $top, $width, $height, $delay, $pPal) {
  $f = $f | 0;
  $image = $image | 0;
@@ -41255,126 +41387,6 @@ function __ZN4tson3MapC2EOS0_($this, $0) {
  HEAP32[$m_statusMessage15 + 8 >> 2] = 0;
  __ZNSt3__26__treeINS_12__value_typeIiPN4tson4TileEEENS_19__map_value_compareIiS5_NS_4lessIiEELb1EEENS_9allocatorIS5_EEEC2EOSC_($this + 176 | 0, $0 + 176 | 0);
  return;
-}
-
-function _main() {
- var $18 = 0, $2 = 0, $23 = 0, $24 = 0, $31 = 0, $32 = 0, $37 = 0, $38 = 0, $42 = f0, $44 = 0, $49 = 0, $50 = 0, $7 = 0, $8 = 0, $Lifespown58 = 0, $activo33 = 0, $activo51 = 0, $agg$tmp = 0, $agg$tmp4 = 0, $agg$tmp72 = 0, $agg$tmp77 = 0, $call = 0, $call3 = 0, $disparo = 0, $i$044 = 0, $i27$041 = 0, $i45$042 = 0, $inc42 = 0, $mapa = 0, $player = 0, $position55 = 0, $ref$tmp$sroa$0$0$$sroa_idx = 0, $sub = f0, $tmpcast$byval_copy = 0, $tmpcast48$byval_copy = 0, $y56 = 0, sp = 0, CSE$0 = 0, CSE$1 = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 192 | 0;
- if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(192);
- $tmpcast48$byval_copy = sp + 176 | 0;
- $tmpcast$byval_copy = sp + 168 | 0;
- $player = sp + 160 | 0;
- HEAP32[$player >> 2] = 0;
- $mapa = sp + 156 | 0;
- HEAP32[$mapa >> 2] = 0;
- $agg$tmp = sp + 144 | 0;
- $agg$tmp4 = sp + 132 | 0;
- $disparo = sp;
- $agg$tmp72 = sp + 120 | 0;
- $agg$tmp77 = sp + 128 | 0;
- _InitWindow(820, 840, 21908);
- _SetTargetFPS(60);
- $call = __Znwm(220) | 0;
- HEAP32[$agg$tmp >> 2] = 0;
- HEAP32[$agg$tmp + 4 >> 2] = 0;
- HEAP32[$agg$tmp + 8 >> 2] = 0;
- __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__initEPKcm($agg$tmp, 21917, __ZNSt3__211char_traitsIcE6lengthEPKc(21917) | 0);
- __ZN4MapaC2ENSt3__212basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE($call, $agg$tmp);
- HEAP32[$mapa >> 2] = $call;
- __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($agg$tmp);
- $call3 = __Znwm(28) | 0;
- HEAP32[$agg$tmp4 >> 2] = 0;
- HEAP32[$agg$tmp4 + 4 >> 2] = 0;
- HEAP32[$agg$tmp4 + 8 >> 2] = 0;
- __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__initEPKcm($agg$tmp4, 21944, __ZNSt3__211char_traitsIcE6lengthEPKc(21944) | 0);
- __ZN4NaveC2ENSt3__212basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERK7Vector2($call3, $agg$tmp4, (HEAP32[$mapa >> 2] | 0) + 212 | 0);
- HEAP32[$player >> 2] = $call3;
- __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($agg$tmp4);
- $i$044 = 0;
- do {
-  $2 = __ZNK4Nave10getNavePosEv(HEAP32[$player >> 2] | 0) | 0;
-  $7 = HEAP32[$2 + 4 >> 2] | 0;
-  CSE$0 = $disparo + ($i$044 * 24 | 0) | 0;
-  $8 = CSE$0 + 8 | 0;
-  HEAP32[$8 >> 2] = HEAP32[$2 >> 2];
-  HEAP32[$8 + 4 >> 2] = $7;
-  HEAPF32[CSE$0 + 20 >> 2] = Math_fround(10.0);
-  $ref$tmp$sroa$0$0$$sroa_idx = CSE$0 + 1 | 0;
-  HEAP8[$ref$tmp$sroa$0$0$$sroa_idx >> 0] = -1;
-  HEAP8[$ref$tmp$sroa$0$0$$sroa_idx + 1 >> 0] = -1 >> 8;
-  HEAP8[$ref$tmp$sroa$0$0$$sroa_idx + 2 >> 0] = -1 >> 16;
-  HEAP8[$ref$tmp$sroa$0$0$$sroa_idx + 3 >> 0] = -1 >> 24;
-  HEAP8[CSE$0 >> 0] = 0;
-  HEAP32[CSE$0 + 16 >> 2] = 0;
-  $i$044 = $i$044 + 1 | 0;
- } while (($i$044 | 0) != 5);
- if (!(_WindowShouldClose() | 0)) do {
-  if (_IsKeyDown(262) | 0) __ZN4Nave6move_xEf(HEAP32[$player >> 2] | 0, Math_fround(25.0));
-  if (_IsKeyDown(263) | 0) __ZN4Nave6move_xEf(HEAP32[$player >> 2] | 0, Math_fround(-25.0));
-  _BeginDrawing();
-  __ZN4Mapa7dibujarEv(HEAP32[$mapa >> 2] | 0);
-  __ZN4Nave4drawEv(HEAP32[$player >> 2] | 0);
-  L14 : do if (_IsKeyPressed(32) | 0) {
-   $i27$041 = 0;
-   while (1) {
-    $activo33 = $disparo + ($i27$041 * 24 | 0) | 0;
-    if (!(HEAP8[$activo33 >> 0] | 0)) break;
-    $inc42 = $i27$041 + 1 | 0;
-    if ($inc42 >>> 0 < 5) $i27$041 = $inc42; else break L14;
-   }
-   $18 = __ZNK4Nave10getNavePosEv(HEAP32[$player >> 2] | 0) | 0;
-   $23 = HEAP32[$18 + 4 >> 2] | 0;
-   $24 = $disparo + ($i27$041 * 24 | 0) + 8 | 0;
-   HEAP32[$24 >> 2] = HEAP32[$18 >> 2];
-   HEAP32[$24 + 4 >> 2] = $23;
-   HEAP8[$activo33 >> 0] = 1;
-  } while (0);
-  $i45$042 = 0;
-  do {
-   $activo51 = $disparo + ($i45$042 * 24 | 0) | 0;
-   if (HEAP8[$activo51 >> 0] | 0) {
-    CSE$1 = $disparo + ($i45$042 * 24 | 0) | 0;
-    $position55 = CSE$1 + 8 | 0;
-    $y56 = CSE$1 + 12 | 0;
-    $sub = Math_fround(Math_fround(HEAPF32[$y56 >> 2]) + Math_fround(-10.0));
-    HEAPF32[$y56 >> 2] = $sub;
-    $Lifespown58 = CSE$1 + 16 | 0;
-    $31 = HEAP32[$Lifespown58 >> 2] | 0;
-    HEAP32[$Lifespown58 >> 2] = $31 + 1;
-    if ($sub > Math_fround(800.0)) HEAP8[$activo51 >> 0] = 0; else {
-     $32 = $position55;
-     $37 = HEAP32[$32 + 4 >> 2] | 0;
-     $38 = $agg$tmp72;
-     HEAP32[$38 >> 2] = HEAP32[$32 >> 2];
-     HEAP32[$38 + 4 >> 2] = $37;
-     $42 = Math_fround(HEAPF32[$disparo + ($i45$042 * 24 | 0) + 20 >> 2]);
-     HEAP32[$agg$tmp77 >> 2] = -1;
-     HEAP32[$tmpcast$byval_copy >> 2] = HEAP32[$agg$tmp72 >> 2];
-     HEAP32[$tmpcast$byval_copy + 4 >> 2] = HEAP32[$agg$tmp72 + 4 >> 2];
-     HEAP8[$tmpcast48$byval_copy >> 0] = HEAP8[$agg$tmp77 >> 0] | 0;
-     HEAP8[$tmpcast48$byval_copy + 1 >> 0] = HEAP8[$agg$tmp77 + 1 >> 0] | 0;
-     HEAP8[$tmpcast48$byval_copy + 2 >> 0] = HEAP8[$agg$tmp77 + 2 >> 0] | 0;
-     HEAP8[$tmpcast48$byval_copy + 3 >> 0] = HEAP8[$agg$tmp77 + 3 >> 0] | 0;
-     _DrawCircleV($tmpcast$byval_copy, $42, $tmpcast48$byval_copy);
-    }
-    if (($31 | 0) > 78) {
-     $44 = __ZNK4Nave10getNavePosEv(HEAP32[$player >> 2] | 0) | 0;
-     $49 = HEAP32[$44 + 4 >> 2] | 0;
-     $50 = $position55;
-     HEAP32[$50 >> 2] = HEAP32[$44 >> 2];
-     HEAP32[$50 + 4 >> 2] = $49;
-     HEAP32[$Lifespown58 >> 2] = 0;
-     HEAP8[$activo51 >> 0] = 0;
-    }
-   }
-   $i45$042 = $i45$042 + 1 | 0;
-  } while (($i45$042 | 0) != 5);
-  HEAPF32[4356] = Math_fround(Math_fround(HEAPF32[4356]) + Math_fround(1.0));
-  _EndDrawing();
- } while (!(_WindowShouldClose() | 0));
- STACKTOP = sp;
- return 0;
 }
 
 function __ZN4tson8WangTile5parseERKN8nlohmann10basic_jsonINSt3__23mapENS3_6vectorENS3_12basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEbxydS9_NS1_14adl_serializerEEE($this, $json) {
@@ -55799,6 +55811,7 @@ function _GifBegin($filename, $width, $height, $delay, $bitDepth, $dither) {
  STACKTOP = sp;
  return $32 | 0;
 }
+
 function _stbi__load_main($s, $x, $y, $comp, $req_comp, $ri, $bpc) {
  $s = $s | 0;
  $x = $x | 0;
@@ -55855,7 +55868,6 @@ function _stbi__load_main($s, $x, $y, $comp, $req_comp, $ri, $bpc) {
  STACKTOP = sp;
  return $28 | 0;
 }
-
 function __ZNSt3__26__treeINS_12__value_typeINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEN8nlohmann10basic_jsonINS_3mapENS_6vectorES7_bxydS5_NS8_14adl_serializerEEEEENS_19__map_value_compareIS7_SE_NS_4lessIvEELb1EEENS5_ISE_EEE30__emplace_hint_unique_key_argsIS7_JRKNS_4pairIKS7_SD_EEEEENS_15__tree_iteratorISE_PNS_11__tree_nodeISE_PvEElEENS_21__tree_const_iteratorISE_SV_lEERKT_DpOT0_($this, $__p, $__k, $__args) {
  $this = $this | 0;
  $__p = $__p | 0;
@@ -59912,6 +59924,41 @@ function _stbir__get_ring_buffer_scanline($get_scanline, $ring_buffer, $begin_in
  return $call | 0;
 }
 
+function __ZN4Nave4drawEv($this) {
+ $this = $this | 0;
+ var $0 = f0, $2 = f0, $agg$tmp = 0, $agg$tmp$byval_copy = 0, $agg$tmp10 = 0, $conv3 = 0, $conv9 = 0, $nave = 0, $tmpcast$byval_copy = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 48 | 0;
+ if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(48);
+ $tmpcast$byval_copy = sp + 44 | 0;
+ $agg$tmp$byval_copy = sp + 24 | 0;
+ $agg$tmp = sp + 4 | 0;
+ $agg$tmp10 = sp;
+ $nave = $this + 16 | 0;
+ HEAP32[$agg$tmp >> 2] = HEAP32[$nave >> 2];
+ HEAP32[$agg$tmp + 4 >> 2] = HEAP32[$nave + 4 >> 2];
+ HEAP32[$agg$tmp + 8 >> 2] = HEAP32[$nave + 8 >> 2];
+ HEAP32[$agg$tmp + 12 >> 2] = HEAP32[$nave + 12 >> 2];
+ HEAP32[$agg$tmp + 16 >> 2] = HEAP32[$nave + 16 >> 2];
+ $0 = Math_fround(HEAPF32[$this + 36 >> 2]);
+ $conv3 = ~~Math_fround($0 - Math_fround((HEAP32[$this + 20 >> 2] | 0) / 2 | 0 | 0));
+ $2 = Math_fround(HEAPF32[$this + 40 >> 2]);
+ $conv9 = ~~Math_fround($2 - Math_fround((HEAP32[$this + 24 >> 2] | 0) / 2 | 0 | 0));
+ HEAP32[$agg$tmp10 >> 2] = -1;
+ HEAP32[$agg$tmp$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
+ HEAP32[$agg$tmp$byval_copy + 4 >> 2] = HEAP32[$agg$tmp + 4 >> 2];
+ HEAP32[$agg$tmp$byval_copy + 8 >> 2] = HEAP32[$agg$tmp + 8 >> 2];
+ HEAP32[$agg$tmp$byval_copy + 12 >> 2] = HEAP32[$agg$tmp + 12 >> 2];
+ HEAP32[$agg$tmp$byval_copy + 16 >> 2] = HEAP32[$agg$tmp + 16 >> 2];
+ HEAP8[$tmpcast$byval_copy >> 0] = HEAP8[$agg$tmp10 >> 0] | 0;
+ HEAP8[$tmpcast$byval_copy + 1 >> 0] = HEAP8[$agg$tmp10 + 1 >> 0] | 0;
+ HEAP8[$tmpcast$byval_copy + 2 >> 0] = HEAP8[$agg$tmp10 + 2 >> 0] | 0;
+ HEAP8[$tmpcast$byval_copy + 3 >> 0] = HEAP8[$agg$tmp10 + 3 >> 0] | 0;
+ _DrawTexture($agg$tmp$byval_copy, $conv3, $conv9, $tmpcast$byval_copy);
+ STACKTOP = sp;
+ return;
+}
+
 function __ZNSt3__26vectorIN4tson5FrameENS_9allocatorIS2_EEE24__emplace_back_slow_pathIJRKN8nlohmann10basic_jsonINS_3mapES0_NS_12basic_stringIcNS_11char_traitsIcEENS3_IcEEEEbxydS3_NS7_14adl_serializerEEEEEEvDpOT_($this, $__args) {
  $this = $this | 0;
  $__args = $__args | 0;
@@ -60187,40 +60234,6 @@ function __ZNKSt3__28time_getIwNS_19istreambuf_iteratorIwNS_11char_traitsIwEEEEE
   }
   if (($10 | 0) < 12 & ($sub$ptr$sub | 0) == 12) HEAP32[$__h >> 2] = $10 + 12;
  } while (0);
- STACKTOP = sp;
- return;
-}
-
-function __ZN4Nave4drawEv($this) {
- $this = $this | 0;
- var $0 = f0, $2 = f0, $agg$tmp = 0, $agg$tmp$byval_copy = 0, $agg$tmp10 = 0, $conv3 = 0, $conv9 = 0, $tmpcast$byval_copy = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 48 | 0;
- if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(48);
- $tmpcast$byval_copy = sp + 44 | 0;
- $agg$tmp$byval_copy = sp + 24 | 0;
- $agg$tmp = sp + 4 | 0;
- $agg$tmp10 = sp;
- HEAP32[$agg$tmp >> 2] = HEAP32[$this >> 2];
- HEAP32[$agg$tmp + 4 >> 2] = HEAP32[$this + 4 >> 2];
- HEAP32[$agg$tmp + 8 >> 2] = HEAP32[$this + 8 >> 2];
- HEAP32[$agg$tmp + 12 >> 2] = HEAP32[$this + 12 >> 2];
- HEAP32[$agg$tmp + 16 >> 2] = HEAP32[$this + 16 >> 2];
- $0 = Math_fround(HEAPF32[$this + 20 >> 2]);
- $conv3 = ~~Math_fround($0 - Math_fround((HEAP32[$this + 4 >> 2] | 0) / 2 | 0 | 0));
- $2 = Math_fround(HEAPF32[$this + 24 >> 2]);
- $conv9 = ~~Math_fround($2 - Math_fround((HEAP32[$this + 8 >> 2] | 0) / 2 | 0 | 0));
- HEAP32[$agg$tmp10 >> 2] = -1;
- HEAP32[$agg$tmp$byval_copy >> 2] = HEAP32[$agg$tmp >> 2];
- HEAP32[$agg$tmp$byval_copy + 4 >> 2] = HEAP32[$agg$tmp + 4 >> 2];
- HEAP32[$agg$tmp$byval_copy + 8 >> 2] = HEAP32[$agg$tmp + 8 >> 2];
- HEAP32[$agg$tmp$byval_copy + 12 >> 2] = HEAP32[$agg$tmp + 12 >> 2];
- HEAP32[$agg$tmp$byval_copy + 16 >> 2] = HEAP32[$agg$tmp + 16 >> 2];
- HEAP8[$tmpcast$byval_copy >> 0] = HEAP8[$agg$tmp10 >> 0] | 0;
- HEAP8[$tmpcast$byval_copy + 1 >> 0] = HEAP8[$agg$tmp10 + 1 >> 0] | 0;
- HEAP8[$tmpcast$byval_copy + 2 >> 0] = HEAP8[$agg$tmp10 + 2 >> 0] | 0;
- HEAP8[$tmpcast$byval_copy + 3 >> 0] = HEAP8[$agg$tmp10 + 3 >> 0] | 0;
- _DrawTexture($agg$tmp$byval_copy, $conv3, $conv9, $tmpcast$byval_copy);
  STACKTOP = sp;
  return;
 }
@@ -68262,6 +68275,7 @@ function __ZNKSt3__27num_getIcNS_19istreambuf_iteratorIcNS_11char_traitsIcEEEEE6
  STACKTOP = sp;
  return $call | 0;
 }
+
 function __ZN8nlohmann10basic_jsonINSt3__23mapENS1_6vectorENS1_12basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEEbxydS7_NS_14adl_serializerEEaSESB_($this, $other) {
  $this = $this | 0;
  $other = $other | 0;
@@ -68333,16 +68347,6 @@ function __ZNKSt3__27num_getIcNS_19istreambuf_iteratorIcNS_11char_traitsIcEEEEE6
  $call = __ZNKSt3__27num_getIcNS_19istreambuf_iteratorIcNS_11char_traitsIcEEEEE17__do_get_unsignedIjEES4_S4_S4_RNS_8ios_baseERjRT_($this, $agg$tmp$byval_copy, $agg$tmp2$byval_copy, $__iob, $__err, $__v) | 0;
  STACKTOP = sp;
  return $call | 0;
-}
-
-function __ZN8nlohmann6detail5lexerINS_10basic_jsonINSt3__23mapENS3_6vectorENS3_12basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEbxydS9_NS_14adl_serializerEEEE8skip_bomEv($this) {
- $this = $this | 0;
- var $retval$0 = 0;
- if ((__ZN8nlohmann6detail5lexerINS_10basic_jsonINSt3__23mapENS3_6vectorENS3_12basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEbxydS9_NS_14adl_serializerEEEE3getEv($this) | 0) == 239) if ((__ZN8nlohmann6detail5lexerINS_10basic_jsonINSt3__23mapENS3_6vectorENS3_12basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEbxydS9_NS_14adl_serializerEEEE3getEv($this) | 0) == 187) $retval$0 = (__ZN8nlohmann6detail5lexerINS_10basic_jsonINSt3__23mapENS3_6vectorENS3_12basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEbxydS9_NS_14adl_serializerEEEE3getEv($this) | 0) == 191; else $retval$0 = 0; else {
-  __ZN8nlohmann6detail5lexerINS_10basic_jsonINSt3__23mapENS3_6vectorENS3_12basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEbxydS9_NS_14adl_serializerEEEE5ungetEv($this);
-  $retval$0 = 1;
- }
- return $retval$0 | 0;
 }
 
 function __ZNSt3__23mapINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEN4tson8PropertyENS_4lessIS6_EENS4_INS_4pairIKS6_S8_EEEEEixERSC_($this, $__k) {
@@ -68503,6 +68507,15 @@ function __ZNKSt3__27num_getIcNS_19istreambuf_iteratorIcNS_11char_traitsIcEEEEE6
  $call = __ZNKSt3__27num_getIcNS_19istreambuf_iteratorIcNS_11char_traitsIcEEEEE17__do_get_unsignedImEES4_S4_S4_RNS_8ios_baseERjRT_($this, $agg$tmp$byval_copy, $agg$tmp2$byval_copy, $__iob, $__err, $__v) | 0;
  STACKTOP = sp;
  return $call | 0;
+}
+function __ZN8nlohmann6detail5lexerINS_10basic_jsonINSt3__23mapENS3_6vectorENS3_12basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEbxydS9_NS_14adl_serializerEEEE8skip_bomEv($this) {
+ $this = $this | 0;
+ var $retval$0 = 0;
+ if ((__ZN8nlohmann6detail5lexerINS_10basic_jsonINSt3__23mapENS3_6vectorENS3_12basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEbxydS9_NS_14adl_serializerEEEE3getEv($this) | 0) == 239) if ((__ZN8nlohmann6detail5lexerINS_10basic_jsonINSt3__23mapENS3_6vectorENS3_12basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEbxydS9_NS_14adl_serializerEEEE3getEv($this) | 0) == 187) $retval$0 = (__ZN8nlohmann6detail5lexerINS_10basic_jsonINSt3__23mapENS3_6vectorENS3_12basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEbxydS9_NS_14adl_serializerEEEE3getEv($this) | 0) == 191; else $retval$0 = 0; else {
+  __ZN8nlohmann6detail5lexerINS_10basic_jsonINSt3__23mapENS3_6vectorENS3_12basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEbxydS9_NS_14adl_serializerEEEE5ungetEv($this);
+  $retval$0 = 1;
+ }
+ return $retval$0 | 0;
 }
 
 function __ZNSt3__2plIcNS_11char_traitsIcEENS_9allocatorIcEEEENS_12basic_stringIT_T0_T1_EEPKS6_RKS9_($agg$result, $__lhs, $__rhs) {
@@ -69610,6 +69623,32 @@ function __ZNSt3__26__treeINS_12__value_typeIiPN4tson4TileEEENS_19__map_value_co
  return;
 }
 
+function __ZN4NaveC2ENSt3__212basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERK7Vector2($this, $text, $navePos) {
+ $this = $this | 0;
+ $text = $text | 0;
+ $navePos = $navePos | 0;
+ var $0 = 0, $5 = 0, $6 = 0, $cond$i$i$i = 0, $nave2 = 0, $ref$tmp = 0, sp = 0;
+ sp = STACKTOP;
+ STACKTOP = STACKTOP + 32 | 0;
+ if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(32);
+ $ref$tmp = sp;
+ $0 = $navePos;
+ $5 = HEAP32[$0 + 4 >> 2] | 0;
+ $6 = $this + 36 | 0;
+ HEAP32[$6 >> 2] = HEAP32[$0 >> 2];
+ HEAP32[$6 + 4 >> 2] = $5;
+ if ((HEAP8[$text + 11 >> 0] | 0) < 0) $cond$i$i$i = HEAP32[$text >> 2] | 0; else $cond$i$i$i = $text;
+ _LoadTexture($ref$tmp, $cond$i$i$i);
+ $nave2 = $this + 16 | 0;
+ HEAP32[$nave2 >> 2] = HEAP32[$ref$tmp >> 2];
+ HEAP32[$nave2 + 4 >> 2] = HEAP32[$ref$tmp + 4 >> 2];
+ HEAP32[$nave2 + 8 >> 2] = HEAP32[$ref$tmp + 8 >> 2];
+ HEAP32[$nave2 + 12 >> 2] = HEAP32[$ref$tmp + 12 >> 2];
+ HEAP32[$nave2 + 16 >> 2] = HEAP32[$ref$tmp + 16 >> 2];
+ STACKTOP = sp;
+ return;
+}
+
 function __ZZN4tson5Layer5parseERKN8nlohmann10basic_jsonINSt3__23mapENS3_6vectorENS3_12basic_stringIcNS3_11char_traitsIcEENS3_9allocatorIcEEEEbxydS9_NS1_14adl_serializerEEEENKUlSF_E_clESF_($this, $item) {
  $this = $this | 0;
  $item = $item | 0;
@@ -70492,31 +70531,6 @@ function __ZNSt3__26vectorIN4tson5LayerENS_9allocatorIS2_EEE13__vdeallocateEv($t
   HEAP32[$__end_$i$i$i >> 2] = 0;
   HEAP32[$this >> 2] = 0;
  }
- return;
-}
-
-function __ZN4NaveC2ENSt3__212basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEERK7Vector2($this, $text, $navePos) {
- $this = $this | 0;
- $text = $text | 0;
- $navePos = $navePos | 0;
- var $0 = 0, $5 = 0, $6 = 0, $cond$i$i$i = 0, $ref$tmp = 0, sp = 0;
- sp = STACKTOP;
- STACKTOP = STACKTOP + 32 | 0;
- if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(32);
- $ref$tmp = sp;
- $0 = $navePos;
- $5 = HEAP32[$0 + 4 >> 2] | 0;
- $6 = $this + 20 | 0;
- HEAP32[$6 >> 2] = HEAP32[$0 >> 2];
- HEAP32[$6 + 4 >> 2] = $5;
- if ((HEAP8[$text + 11 >> 0] | 0) < 0) $cond$i$i$i = HEAP32[$text >> 2] | 0; else $cond$i$i$i = $text;
- _LoadTexture($ref$tmp, $cond$i$i$i);
- HEAP32[$this >> 2] = HEAP32[$ref$tmp >> 2];
- HEAP32[$this + 4 >> 2] = HEAP32[$ref$tmp + 4 >> 2];
- HEAP32[$this + 8 >> 2] = HEAP32[$ref$tmp + 8 >> 2];
- HEAP32[$this + 12 >> 2] = HEAP32[$ref$tmp + 12 >> 2];
- HEAP32[$this + 16 >> 2] = HEAP32[$ref$tmp + 16 >> 2];
- STACKTOP = sp;
  return;
 }
 
@@ -81296,7 +81310,7 @@ function __ZN4Nave6move_xEf($this, $d) {
  $this = $this | 0;
  $d = Math_fround($d);
  var $x = 0;
- $x = $this + 20 | 0;
+ $x = $this + 36 | 0;
  HEAPF32[$x >> 2] = Math_fround(Math_fround(HEAPF32[$x >> 2]) + $d);
  return;
 }
@@ -82288,6 +82302,15 @@ function __ZNSt3__211char_traitsIcE2eqEcc($__c1, $__c2) {
  $__c1 = $__c1 | 0;
  $__c2 = $__c2 | 0;
  return $__c1 << 24 >> 24 == $__c2 << 24 >> 24 | 0;
+}
+
+function __ZN4NaveC2Edd($this, $l, $w) {
+ $this = $this | 0;
+ $l = +$l;
+ $w = +$w;
+ HEAPF64[$this >> 3] = $l;
+ HEAPF64[$this + 8 >> 3] = $w;
+ return;
 }
 
 function __ZNSt3__215basic_streambufIwNS_11char_traitsIwEEE9underflowEv($this) {
@@ -83355,6 +83378,11 @@ function b28(p0, p1, p2, p3) {
  nullFunc_viiii(28);
 }
 
+function __ZNKSt3__26vectorIiNS_9allocatorIiEEE8max_sizeEv($this) {
+ $this = $this | 0;
+ return 1073741823;
+}
+
 function __ZNKSt3__26vectorIcNS_9allocatorIcEEE8max_sizeEv($this) {
  $this = $this | 0;
  return 2147483647;
@@ -83412,10 +83440,6 @@ function __ZNKSt3__27codecvtIDsc11__mbstate_tE16do_always_noconvEv($this) {
 function __ZNKSt3__27codecvtIDic11__mbstate_tE16do_always_noconvEv($this) {
  $this = $this | 0;
  return 0;
-}
-function __ZNKSt3__26vectorIiNS_9allocatorIiEEE8max_sizeEv($this) {
- $this = $this | 0;
- return 1073741823;
 }
 
 function _strtold_l($s, $p, $l) {
@@ -83507,11 +83531,6 @@ function __ZNSt3__211char_traitsIcE12to_char_typeEi($__c) {
  return $__c & 255 | 0;
 }
 
-function __ZNKSt3__27codecvtIDsc11__mbstate_tE11do_encodingEv($this) {
- $this = $this | 0;
- return 0;
-}
-
 function __ZNKSt3__27codecvtIDic11__mbstate_tE11do_encodingEv($this) {
  $this = $this | 0;
  return 0;
@@ -83560,6 +83579,10 @@ function __ZNSt3__211char_traitsIcE11to_int_typeEc($__c) {
 function __ZNKSt3__27codecvtIcc11__mbstate_tE11do_encodingEv($this) {
  $this = $this | 0;
  return 1;
+}
+function __ZNKSt3__27codecvtIDsc11__mbstate_tE11do_encodingEv($this) {
+ $this = $this | 0;
+ return 0;
 }
 
 function _llvm_round_f64(d) {
@@ -83662,6 +83685,11 @@ function _strtof($s, $p) {
 function __ZNKSt3__223__system_error_category4nameEv($this) {
  $this = $this | 0;
  return 45078;
+}
+
+function __ZNK4Nave8getWidthEv($this) {
+ $this = $this | 0;
+ return +(+HEAPF64[$this + 8 >> 3]);
 }
 
 function __ZNSt8bad_castC2Ev($this) {
@@ -83809,7 +83837,7 @@ function _strtod($s, $p) {
 
 function __ZNK4Nave10getNavePosEv($this) {
  $this = $this | 0;
- return $this + 20 | 0;
+ return $this + 36 | 0;
 }
 
 function _isxdigit_l($c, $l) {
