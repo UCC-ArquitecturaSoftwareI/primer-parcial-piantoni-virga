@@ -35,15 +35,10 @@
      const Vector2 &getNavePos() const;
 
      Vector2 nave_pos;
- };
-    /**/
-    Nave::Nave(double l , double w=0) {
-        length = l;
-        width = w;
-    }
 
- double Nave::getWidth() const { return width; }
- double Nave::getLength() const { return length; }
+ };
+
+
 
 
 #endif //RAYLIBTEMPLATE_NAVE_H

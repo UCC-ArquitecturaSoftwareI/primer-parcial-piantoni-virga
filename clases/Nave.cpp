@@ -10,6 +10,10 @@ Nave::Nave(std::string text, const Vector2 &navePos) : nave_pos(navePos) {
     nave = LoadTexture(text.c_str());
 }
 
+Nave::Nave(double l , double w) {
+    length = l;
+    width = w;
+}
 
 void Nave::draw() {
 
@@ -26,5 +30,14 @@ void Nave::move_y(float d) {
 const Vector2 &Nave::getNavePos() const {
     return nave_pos;
 }
+
+double Nave::getWidth() const {
+    return width;
+}
+
+double Nave::getLength() const {
+    return length; }
+
+
 
 

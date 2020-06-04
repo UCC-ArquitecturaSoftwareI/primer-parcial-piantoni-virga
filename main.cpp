@@ -26,8 +26,7 @@ int main(){
 
     player = new Nave ("resources/ship.png", mapa->player_init_pos);
 
-
-    //Preguntar al profe como hacer que me compare el valor con &vector2 de nave pos
+    //Tamaño de la nave
     Nave pnave(86.0, 78.0);
 
 
@@ -87,12 +86,11 @@ int main(){
 
 
 
-        /* ARREGLAR EL SETTER Y EL GETTER PARA QUE NOS DE UN ANCHO Y SE LO PODAMOS PASAR, TAMBIEN VER LO DE NAVEPOS
-            set y getter
-             Colision de la nave con los bordes de la pantalla
+        /*
+         * LIMITES DE LA NAVE AL MOBVERSE HACIA LOS BORDES.
         */
-            if ((player->nave_pos.x=0 +  pnave.getWidth()) >= GetScreenWidth()) player->nave_pos.x = GetScreenWidth() -  pnave.getWidth();
-            else if (player->getNavePos().x <= 0) player->nave_pos.x=0;
+            if ((player->nave_pos.x +  pnave.getWidth()) >= GetScreenWidth()) player->nave_pos.x = GetScreenWidth() -  pnave.getWidth();
+            else if (player->nave_pos.x <= 70) player->nave_pos.x=70;
 
 
 
