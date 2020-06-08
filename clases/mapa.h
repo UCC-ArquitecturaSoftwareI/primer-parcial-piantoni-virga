@@ -21,6 +21,9 @@ public:
     Mapa(std::string file);
 
     void dibujar();
+
+    //Vector2 &enemigo_init_pos;
+    const Vector2 &enemigo_init_pos;
 };
 
 #endif //RAYLIBTEMPLATE_MAPA_H

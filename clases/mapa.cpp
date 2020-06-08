@@ -25,6 +25,19 @@ Mapa::Mapa(std::string file) {
         player_init_pos.x = player->getPosition().x;
         player_init_pos.y = player->getPosition().y;
 
+
+        /*Arreglar la enemy position. De nuestra forma lo obtenemos a travez del ID.
+        tson::Object *penemigo = objs->getObj(14);
+        enemigo_init_pos.x = penemigo->getPosition().x;
+
+         PODEMOS TRAERLO DE DIFERENTES FORMAS:
+         //Gets all objects with a matching name
+                std::vector<tson::Object> enemies = layer.getObjectsByName("goomba");
+
+                //Gets all objects of a specific type
+                std::vector<tson::Object> objects = layer.getObjectsByType(tson::ObjectType::Object);
+        */
+
         for (auto &obj : objs->getObjects()) {
             //Just iterate through all the objects
             std::cout << "Nombre: " << obj.getName() << std::endl;

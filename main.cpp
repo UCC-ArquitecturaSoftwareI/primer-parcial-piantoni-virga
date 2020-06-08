@@ -4,11 +4,14 @@
 #include "clases/bala.h"
 #include "clases/Nave.h"
 #include "clases/mapa.h"
+#include "clases/Enemigo.h"
+
 
 
 //Variables globales
 Mapa *mapa;
 Nave *player;
+Enemigo *penemigo;
 
 
 
@@ -26,8 +29,13 @@ int main(){
 
     player = new Nave ("resources/ship.png", mapa->player_init_pos);
 
+    penemigo = new Enemigo ("resources/Images/Enemigo.png", mapa->enemigo_init_pos);
+
     //Tamaño de la nave
     Nave pnave(86.0, 78.0);
+
+    //Tamaño de la nave
+    Enemigo penemigo(86.0, 78.0);
 
 
     //Inicializacion de disparos
@@ -48,13 +56,13 @@ int main(){
 
     while (!WindowShouldClose()){
         if ( IsKeyDown (KEY_RIGHT)) {
-            player-> move_x ( 25.0f );
+            player-> move_x ( 5.0f );
 
 
         }
         if ( IsKeyDown (KEY_LEFT)) {
 
-            player-> move_x ( -25.0f );
+            player-> move_x ( -5.0f );
         }
 
 
