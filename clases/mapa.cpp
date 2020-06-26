@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cmath>
 #include "mapa.h"
+using namespace std;
 
 
 Mapa::Mapa(std::string file) {
@@ -20,23 +21,22 @@ Mapa::Mapa(std::string file) {
 
         }
 
+        //Inicializamos el player, pasandolo con el nombre del primer objeto
         auto objs = map.getLayer("Objetos");
         tson::Object *player = objs->firstObj("player");
         player_init_pos.x = player->getPosition().x;
         player_init_pos.y = player->getPosition().y;
 
 
-        /*Arreglar la enemy position. De nuestra forma lo obtenemos a travez del ID.
-        tson::Object *penemigo = objs->getObj(14);
+
+        //Inicializamos la posicion del enemigo, pasandolo por el id
+        auto eobjs = map.getLayer( "Objetos");
+        tson::Object *penemigo = eobjs->getObj(14);
         enemigo_init_pos.x = penemigo->getPosition().x;
+        enemigo_init_pos.y = penemigo->getPosition().y;
 
-         PODEMOS TRAERLO DE DIFERENTES FORMAS:
-         //Gets all objects with a matching name
-                std::vector<tson::Object> enemies = layer.getObjectsByName("goomba");
 
-                //Gets all objects of a specific type
-                std::vector<tson::Object> objects = layer.getObjectsByType(tson::ObjectType::Object);
-        */
+
 
         for (auto &obj : objs->getObjects()) {
             //Just iterate through all the objects

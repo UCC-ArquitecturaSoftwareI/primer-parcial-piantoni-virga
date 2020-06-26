@@ -11,18 +11,19 @@
 
     /**/
  private:
+
     double length;
-    double width;
+    double  width;
 
 
  protected:
-     Texture2D nave;
+     Texture2D enemigo;
 
 
  public:
-     Enemigo(std::string text,const Vector2 &navePos);
+     Enemigo(std::string text,const Vector2 &enemigoPos);
 
-    /**/
+
     Enemigo (double, double);
     double getLength() const;
     double getWidth() const;
@@ -32,13 +33,13 @@
      void move_x(float d);
      void move_y(float d);
 
-     const Vector2 &getNavePos() const;
+     const Vector2 &getEnemigoPos() const;
 
-     Vector2 nave_pos;
+     Vector2 enemigo_pos;
 
  };
 
 
 
 
-#endif //RAYLIBTEMPLATE_NAVE_H
+#endif //RAYLIBTEMPLATE_ENEMIGO_H

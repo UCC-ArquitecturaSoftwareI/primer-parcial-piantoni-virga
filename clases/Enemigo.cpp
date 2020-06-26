@@ -5,30 +5,32 @@
 #include <string>
 #include "Enemigo.h"
 
-Enemigo::Enemigo(std::string text, const Vector2 &navePos) : nave_pos(navePos) {
+Enemigo::Enemigo(std::string text, const Vector2 &enemigoPos) : enemigo_pos(enemigoPos) {
 
-    nave = LoadTexture(text.c_str());
+    enemigo = LoadTexture(text.c_str());
 }
+
 
 Enemigo::Enemigo(double l , double w) {
     length = l;
     width = w;
 }
 
+
 void Enemigo::draw() {
 
-    DrawTexture(nave, nave_pos.x - nave.width/2, nave_pos.y- nave.height/2, WHITE);
+    DrawTexture(enemigo, enemigo_pos.x - enemigo.width/2, enemigo_pos.y- enemigo.height/2, WHITE);
 }
 
 void Enemigo::move_x(float d) {
-    nave_pos.x += d;
+    enemigo_pos.x += d;
 }
 void Enemigo::move_y(float d) {
-    nave_pos.y += d;
+    enemigo_pos.y += d;
 }
 
-const Vector2 &Enemigo::getNavePos() const {
-    return nave_pos;
+const Vector2 &Enemigo::getEnemigoPos() const {
+    return enemigo_pos;
 }
 
 double Enemigo::getWidth() const {
@@ -36,7 +38,8 @@ double Enemigo::getWidth() const {
 }
 
 double Enemigo::getLength() const {
-    return length; }
+    return length;
+}
 
 
 

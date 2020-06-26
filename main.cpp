@@ -15,6 +15,7 @@ Enemigo *penemigo;
 
 
 
+
 int main(){
     const int MAXDISPAROS=5;
     const int WindowWidth = 820;
@@ -31,17 +32,15 @@ int main(){
 
     penemigo = new Enemigo ("resources/Images/Enemigo.png", mapa->enemigo_init_pos);
 
-    //Tamaño de la nave
+    //Tamaño de la nave, insertar tamaño de la nave enemiga en caso de que se mueva.
     Nave pnave(86.0, 78.0);
 
-    //Tamaño de la nave
-    Enemigo penemigo(86.0, 78.0);
 
 
     //Inicializacion de disparos
 
     Bala disparo[MAXDISPAROS];
-    //jugador= new  Nave ( "resources/ship.png" , Vector2 {WindowWidth / 2 ,WindowHeigh - 45 });
+
 
     for (int i=0; i<MAXDISPAROS; i++) {
 
@@ -72,6 +71,7 @@ int main(){
 
         mapa->dibujar();
         player->draw();
+        penemigo->draw();
 
         //ClearBackground(BLACK);
 
@@ -135,12 +135,6 @@ int main(){
 
               static float rotation = 0.5f;
                rotation ++;
-               //DrawRectangle(x,y,100,300, RED);
-               //DrawRectangleV(Vector2{300,200}, Vector2{100,30}, BLACK);
-               //DrawRectanglePro(Rectangle{200,200,100,100}, Vector2{50,50}, rotation, GREEN);
-               //jugador->draw();
-               //DrawCircle(400,300,64, ORANGE);
-               //DrawTriangle(Vector2{50,0}, Vector2{0,100}, Vector2{100,100}, YELLOW);
 
              EndDrawing();
 
