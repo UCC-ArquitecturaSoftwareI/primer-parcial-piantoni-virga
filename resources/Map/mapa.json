@@ -68,8 +68,20 @@
                  "type":"",
                  "visible":true,
                  "width":0,
-                 "x":415.461877948562,
-                 "y":786.790442854969
+                 "x":417.145379632064,
+                 "y":775.005931070457
+                }, 
+                {
+                 "height":0,
+                 "id":14,
+                 "name":"Enemigo",
+                 "point":true,
+                 "rotation":0,
+                 "type":"Enemigos",
+                 "visible":true,
+                 "width":0,
+                 "x":415.824915824915,
+                 "y":126.262626262627
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -78,7 +90,7 @@
          "y":0
         }],
  "nextlayerid":3,
- "nextobjectid":14,
+ "nextobjectid":18,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.3.4",
