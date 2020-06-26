@@ -188,8 +188,11 @@ int main(){
 
                     if (CheckCollisionCircleRec(disparo[i].position, disparo[i].radio, penemigo->jugador1Colision)) {
 
-                        //penemigo->vida = ((penemigo->vida) - (disparo->damage));
-                        std::cout<<"Jugador 1 Alcanzado:  " << std::endl;
+                        penemigo->vida = ((penemigo->vida) - (disparo->damage));
+                        if (penemigo->vida == 0) {
+                            std::cout<< "Fin del juego, Gana jugador 0"<< std::endl;
+                        }
+                        std::cout<<"Jugador 1 Alcanzado  " << std::endl;
                         disparo[i].Lifespown = 0;
                         disparo[i].activo = false;
                     }
@@ -230,8 +233,12 @@ int main(){
 
                     if (CheckCollisionCircleRec(disparo1[i].position, disparo1[i].radio, player->jugador0Colision)) {
 
-                        //player->vida = ((player->vida) - (disparo->damage));
-                        std::cout<<"Jugador 0 Alcanzado:  " << std::endl;
+                        player->vida = ((player->vida) - (disparo->damage));
+                        //std::cout<< player->vida << std::endl;
+                        if (player->vida == 0) {
+                            std::cout<< "Fin del juego, Gana jugador 1"<< std::endl;
+                        }
+                        std::cout<<"Jugador 0 Alcanzado por bala  " << std::endl;
                         disparo1[i].Lifespown = 0;
                         disparo1[i].activo = false;
                     }

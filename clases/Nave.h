@@ -22,7 +22,7 @@
  public:
     Nave(std::string text,const Vector2 &navePos);
 
-    int vida = 100;
+    int vida = 1000;
     bool active;
     Rectangle jugador0Colision;
     Nave (double, double);
