@@ -20,9 +20,11 @@
 
 
  public:
-     Nave(std::string text,const Vector2 &navePos);
+    Nave(std::string text,const Vector2 &navePos);
 
-    /**/
+    int vida = 100;
+    bool active;
+    Rectangle jugador0Colision;
     Nave (double, double);
     double getLength() const;
     double getWidth() const;

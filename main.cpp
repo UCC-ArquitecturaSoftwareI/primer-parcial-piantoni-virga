@@ -165,6 +165,9 @@ int main(){
 
                     disparo[i].Lifespown++;
 
+                    penemigo->jugador1Colision.x = penemigo->enemigo_pos.x;
+                    penemigo->jugador1Colision.y = penemigo->enemigo_pos.y;
+
                     if (disparo[i].position.y > 800) {
                         disparo[i].activo = false;
                     }
@@ -181,6 +184,15 @@ int main(){
                         disparo[i].Lifespown = 0;
                         disparo[i].activo = false;
 
+                    }
+
+                    if (CheckCollisionCircleRec(disparo[i].position, disparo[i].radio, penemigo->jugador1Colision)) {
+
+
+                        penemigo->vida = ((penemigo->vida) - (disparo->damage));
+                        std::cout<<"Jugador 1 Alcanzado por bala"<< std::endl;
+                        disparo[i].Lifespown = 0;
+                        disparo[i].activo = false;
                     }
 
                 }

@@ -17,6 +17,7 @@ Enemigo::Enemigo(double l , double w) {
 }
 
 
+
 void Enemigo::draw() {
 
     DrawTexture(enemigo, enemigo_pos.x - enemigo.width/2, enemigo_pos.y- enemigo.height/2, WHITE);

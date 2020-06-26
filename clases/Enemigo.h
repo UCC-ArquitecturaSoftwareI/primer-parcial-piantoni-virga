@@ -21,9 +21,10 @@
 
 
  public:
-     Enemigo(std::string text,const Vector2 &enemigoPos);
-
-
+    Enemigo(std::string text,const Vector2 &enemigoPos);
+    int vida = 100;
+    bool active;
+    Rectangle jugador1Colision;
     Enemigo (double, double);
     double getLength() const;
     double getWidth() const;
