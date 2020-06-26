@@ -17,7 +17,8 @@ Enemigo *penemigo;
 
 
 int main(){
-    const int MAXDISPAROS=5;
+    const int MAXDISPAROSRED=5;
+    const int MAXDISPAROSBLUE=5;
     const int WindowWidth = 820;
     const int WindowHeigh = 840;
     //Nave* jugador;
@@ -41,19 +42,38 @@ int main(){
 
     //Inicializacion de disparos
 
-    Bala disparo[MAXDISPAROS];
+    Bala disparo[MAXDISPAROSRED];
+    Bala disparo1[MAXDISPAROSBLUE];
 
 
-    for (int i=0; i<MAXDISPAROS; i++) {
+    for (int i=0; i<MAXDISPAROSRED; i++) {
 
+        //Disparos del Jugador numero 0
         disparo[i].position = player->getNavePos();
+        disparo1[i].position = penemigo->getEnemigoPos();
         disparo[i].radio = 10;
-        disparo[i].color = WHITE;
+        disparo[i].color = RED;
         disparo[i].activo = false;
         disparo[i].Lifespown = 0;
 
+        // Disparos del jugadores numero 1
+        disparo1[i].radio = 10;
+        disparo1[i].color = BLUE;
+        disparo1[i].activo = false;
+        disparo1[i].Lifespown = 0;
+
     }
 
+    for (int i=0; i<MAXDISPAROSBLUE; i++) {
+
+        // Disparos del jugadores numero 1
+        disparo1[i].position = penemigo->getEnemigoPos();
+        disparo1[i].radio = 10;
+        disparo1[i].color = BLUE;
+        disparo1[i].activo = false;
+        disparo1[i].Lifespown = 0;
+
+    }
 
     while (!WindowShouldClose()){
 
@@ -93,10 +113,10 @@ int main(){
 
 
 
-        //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA
+        //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA DEL JUGADOR 1
             if (IsKeyPressed(KEY_SPACE))
             {
-                for (int i = 0; i < MAXDISPAROS; i++){
+                for (int i = 0; i < MAXDISPAROSRED; i++){
 
                     if (!disparo[i].activo) {
                         disparo[i].position = player->getNavePos();
@@ -107,6 +127,19 @@ int main(){
                 }
             }
 
+        //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA DEL JUGADOR 2
+            if (IsKeyPressed(KEY_D))
+            {
+                for (int i = 0; i < MAXDISPAROSBLUE; i++){
+
+                    if (!disparo1[i].activo) {
+                        disparo1[i].position = penemigo->getEnemigoPos();
+
+                        disparo1[i].activo = true;
+                        break;
+                    }
+                }
+            }
 
 
 
@@ -122,9 +155,9 @@ int main(){
 
 
         // Otro "for" para todas las cosas que tenga que hacer la bala cuando activo = true;
-            for (int i=0; i<MAXDISPAROS; i++) {
+            for (int i=0; i<MAXDISPAROSRED; i++) {
                 if (disparo[i].activo) {
-                    disparo[i].position.y -= 10;
+                    disparo[i].position.y -= 10;    //Esta linea nos dice la direccion de la bala, en conjkunto para los dos jugadores
 
                     disparo[i].Lifespown++;
 
@@ -133,7 +166,7 @@ int main(){
                     }
 
                     if (disparo[i].activo) {
-                        DrawCircleV(disparo[i].position, disparo[i].radio, WHITE);
+                        DrawCircleV(disparo[i].position, disparo[i].radio, RED);
 
                     }
 
@@ -143,6 +176,35 @@ int main(){
                         disparo[i].position = player->getNavePos();
                         disparo[i].Lifespown = 0;
                         disparo[i].activo = false;
+
+                    }
+
+                }
+
+            }
+
+        // Otro "for" para todas las cosas que tenga que hacer la bala cuando activo = true;
+            for (int i=0; i<MAXDISPAROSBLUE; i++) {
+                if (disparo1[i].activo) {
+                    disparo1[i].position.y += 10;    //Esta linea nos dice la direccion de la bala, en conjkunto para los dos jugadores
+
+                    disparo1[i].Lifespown++;
+
+                    if (disparo1[i].position.y < 0) {
+                        disparo1[i].activo = false;
+                    }
+
+                    if (disparo1[i].activo) {
+                        DrawCircleV(disparo1[i].position, disparo1[i].radio, BLUE);
+
+                    }
+
+                    //cuan lejos puede llegar la bala hasta ser desactivada
+
+                    if (disparo1[i].Lifespown >= 80) {
+                        disparo1[i].position = penemigo->getEnemigoPos();
+                        disparo1[i].Lifespown = 0;
+                        disparo1[i].activo = false;
 
                     }
 
