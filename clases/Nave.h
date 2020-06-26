@@ -30,6 +30,7 @@
     double getWidth() const;
 
 
+
      void draw();
      void move_x(float d);
      void move_y(float d);

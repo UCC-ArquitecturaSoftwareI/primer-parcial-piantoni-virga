@@ -15,6 +15,8 @@ Nave::Nave(double l , double w) {
     width = w;
 }
 
+
+
 void Nave::draw() {
 
     DrawTexture(nave, nave_pos.x - nave.width/2, nave_pos.y- nave.height/2, WHITE);

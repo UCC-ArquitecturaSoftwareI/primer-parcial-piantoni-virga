@@ -42,6 +42,7 @@ int main(){
 
 
 
+
     //Inicializacion de disparos
 
     Bala disparo[MAXDISPAROSRED];
@@ -106,9 +107,7 @@ int main(){
 
 
 
-
-            BeginDrawing();
-
+        BeginDrawing();
         mapa->dibujar();
         player->draw();
         penemigo->draw();
@@ -117,7 +116,7 @@ int main(){
 
 
 
-        //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA DEL JUGADOR 1
+        //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA DEL JUGADOR 0
             if (IsKeyPressed(KEY_SPACE))
             {
                 for (int i = 0; i < MAXDISPAROSRED; i++){
@@ -131,7 +130,7 @@ int main(){
                 }
             }
 
-        //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA DEL JUGADOR 2
+        //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA DEL JUGADOR 1
             if (IsKeyPressed(KEY_D))
             {
                 for (int i = 0; i < MAXDISPAROSBLUE; i++){
@@ -167,6 +166,7 @@ int main(){
 
                     penemigo->jugador1Colision.x = penemigo->enemigo_pos.x;
                     penemigo->jugador1Colision.y = penemigo->enemigo_pos.y;
+                    penemigo->jugador1Colision.width = penemigo->getWidth();
 
                     if (disparo[i].position.y > 800) {
                         disparo[i].activo = false;
@@ -207,6 +207,7 @@ int main(){
 
                     player->jugador0Colision.x = player->nave_pos.x;
                     player->jugador0Colision.y = player->nave_pos.y;
+                    player->jugador0Colision.width = player->getWidth();
 
 
                     if (disparo1[i].position.y < 0) {
