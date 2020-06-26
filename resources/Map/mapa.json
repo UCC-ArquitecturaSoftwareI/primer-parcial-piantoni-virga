@@ -64,6 +64,12 @@
                  "id":11,
                  "name":"player",
                  "point":true,
+                 "properties":[
+                        {
+                         "name":"Vida",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -76,6 +82,12 @@
                  "id":14,
                  "name":"Enemigo",
                  "point":true,
+                 "properties":[
+                        {
+                         "name":"Vida",
+                         "type":"int",
+                         "value":100
+                        }],
                  "rotation":0,
                  "type":"Enemigos",
                  "visible":true,

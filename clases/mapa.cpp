@@ -26,7 +26,7 @@ Mapa::Mapa(std::string file) {
         tson::Object *player = objs->firstObj("player");
         player_init_pos.x = player->getPosition().x;
         player_init_pos.y = player->getPosition().y;
-
+        std::cout << "Vida jugador 1: " << player->get<int>("Vida") << std::endl;
 
 
         //Inicializamos la posicion del enemigo, pasandolo por el id
@@ -34,6 +34,7 @@ Mapa::Mapa(std::string file) {
         tson::Object *penemigo = eobjs->getObj(14);
         enemigo_init_pos.x = penemigo->getPosition().x;
         enemigo_init_pos.y = penemigo->getPosition().y;
+        std::cout << "Vida jugador 2: " << penemigo->get<int>("Vida") << std::endl;
 
 
 
