@@ -32,9 +32,11 @@ int main(){
 
     penemigo = new Enemigo ("resources/Images/Enemigo.png", mapa->enemigo_init_pos);
 
-    //Tamaño de la nave, insertar tamaño de la nave enemiga en caso de que se mueva.
+    //Tamaño del jugador 1
     Nave pnave(86.0, 78.0);
 
+    //Tamaño del jugador 2
+    Enemigo pnave1(86.0, 78.0);
 
 
     //Inicializacion de disparos
@@ -54,6 +56,8 @@ int main(){
 
 
     while (!WindowShouldClose()){
+
+        // Movimiento del jugador1 con sus respectivas teclas.
         if ( IsKeyDown (KEY_RIGHT)) {
             player-> move_x ( 5.0f );
 
@@ -64,10 +68,22 @@ int main(){
             player-> move_x ( -5.0f );
         }
 
+        // Movimento del jugador2 con sus respectivas teclas.
+            if (IsKeyDown(KEY_S)) {
+                penemigo->move_x(5.0f);
+
+
+            }
+            if (IsKeyDown(KEY_A)) {
+
+                penemigo->move_x(-5.0f);
+            }
 
 
 
-        BeginDrawing();
+
+
+            BeginDrawing();
 
         mapa->dibujar();
         player->draw();
@@ -95,10 +111,13 @@ int main(){
 
 
         /*
-         * LIMITES DE LA NAVE AL MOBVERSE HACIA LOS BORDES.
+          LIMITES DE LOS JUGADORES AL MOVERSE HACIA LOS BORDES.
         */
             if ((player->nave_pos.x +  pnave.getWidth()) >= GetScreenWidth()) player->nave_pos.x = GetScreenWidth() -  pnave.getWidth();
-            else if (player->nave_pos.x <= 70) player->nave_pos.x=70;
+            else if (player->nave_pos.x <= 110) player->nave_pos.x=110;
+
+            if ((penemigo->enemigo_pos.x +  pnave1.getWidth()) >= GetScreenWidth()) penemigo->enemigo_pos.x = GetScreenWidth() -  pnave1.getWidth();
+            else if (penemigo->enemigo_pos.x <= 100) penemigo->enemigo_pos.x=100;
 
 
 

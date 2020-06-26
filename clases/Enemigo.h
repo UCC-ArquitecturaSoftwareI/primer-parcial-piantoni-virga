@@ -9,7 +9,7 @@
 
  class Enemigo {
 
-    /**/
+
  private:
 
     double length;
