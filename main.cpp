@@ -164,9 +164,9 @@ int main(){
 
                     disparo[i].Lifespown++;
 
-                    penemigo->jugador1Colision.x = penemigo->enemigo_pos.x;
+                    penemigo->jugador1Colision.x = penemigo->enemigo_pos.x;         // CAMBIAR EL PUNTO DE EL TILED A UN RECTANGULO, YA QUE LA ZONA DEL RECTANGULO VA HACIA LA DERECHA Y NO HACIA LA IZQUUERDA
                     penemigo->jugador1Colision.y = penemigo->enemigo_pos.y;
-                    penemigo->jugador1Colision.width = penemigo->getWidth();
+                    penemigo->jugador1Colision.width = pnave1.getWidth();
 
                     if (disparo[i].position.y > 800) {
                         disparo[i].activo = false;
@@ -210,7 +210,7 @@ int main(){
 
                     player->jugador0Colision.x = player->nave_pos.x;
                     player->jugador0Colision.y = player->nave_pos.y;
-                    player->jugador0Colision.width = player->getWidth();
+                    player->jugador0Colision.width = pnave.getWidth();
 
 
                     if (disparo1[i].position.y < 0) {
