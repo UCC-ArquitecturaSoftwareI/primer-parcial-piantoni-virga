@@ -158,7 +158,7 @@ int main(){
 
 
 
-        // Otro "for" para todas las cosas que tenga que hacer la bala cuando activo = true;
+        // "FOR"para todas las intrucciones que tiene que realizar la bala del jugador 0.
             for (int i=0; i<MAXDISPAROSRED; i++) {
                 if (disparo[i].activo) {
                     disparo[i].position.y -= 10;    //Esta linea nos dice la direccion de la bala, en conjkunto para los dos jugadores
@@ -188,9 +188,8 @@ int main(){
 
                     if (CheckCollisionCircleRec(disparo[i].position, disparo[i].radio, penemigo->jugador1Colision)) {
 
-
-                        penemigo->vida = ((penemigo->vida) - (disparo->damage));
-                        std::cout<<"Jugador 1 Alcanzado por bala"<< std::endl;
+                        //penemigo->vida = ((penemigo->vida) - (disparo->damage));
+                        std::cout<<"Jugador 1 Alcanzado:  " << std::endl;
                         disparo[i].Lifespown = 0;
                         disparo[i].activo = false;
                     }
@@ -199,12 +198,16 @@ int main(){
 
             }
 
-        // Otro "for" para todas las cosas que tenga que hacer la bala cuando activo = true;
+        // "FOR" para todas las intrucciones que tiene que realizar la bala del jugador 1.
             for (int i=0; i<MAXDISPAROSBLUE; i++) {
                 if (disparo1[i].activo) {
                     disparo1[i].position.y += 10;    //Esta linea nos dice la direccion de la bala, en conjkunto para los dos jugadores
 
                     disparo1[i].Lifespown++;
+
+                    player->jugador0Colision.x = player->nave_pos.x;
+                    player->jugador0Colision.y = player->nave_pos.y;
+
 
                     if (disparo1[i].position.y < 0) {
                         disparo1[i].activo = false;
@@ -222,6 +225,14 @@ int main(){
                         disparo1[i].Lifespown = 0;
                         disparo1[i].activo = false;
 
+                    }
+
+                    if (CheckCollisionCircleRec(disparo1[i].position, disparo1[i].radio, player->jugador0Colision)) {
+
+                        //player->vida = ((player->vida) - (disparo->damage));
+                        std::cout<<"Jugador 0 Alcanzado:  " << std::endl;
+                        disparo1[i].Lifespown = 0;
+                        disparo1[i].activo = false;
                     }
 
                 }
