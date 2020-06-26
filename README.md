@@ -1,7 +1,7 @@
 ![Build and Deploy][badge]
 # PLATAFORMA
 
-## Integrantes
+## Creadores
 
 **Piantoni Francisco y Virga Santos Jose**
 
@@ -10,9 +10,9 @@ para deployear la versión HTML5 del juego en gh-pages del mismo repositorio.
 
 **Descripcion**
 
-Para este proyecto decidimos realizar un juego de tipo **Shooter**, especificamente un juego como  el **Space Invaders**.
+Para este proyecto decidimos realizar un juego de tipo **Shooter**, en el cual tendremos dos jugadores los cuales seran enemigos entre si y tendran como objetivo aniquilar al otro .
 
-Se puede ver desde: [Github Pages][gh-pages]
+El mismo se puede visualizar desde: [Github Pages][gh-pages]
 
 
 [gh-pages]:https://ucc-arquitecturasoftwarei.github.io/primer-parcial-piantoni-virga/
