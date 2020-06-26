@@ -12,14 +12,19 @@
 
 
 class Bala {
+
+
 public:
     bool activo;
     Color color;
     Vector2 position;
     int Lifespown;
+    int damage;
     float radio;
     void moveposition();
     void acelerar();
+
+
 };
 
 

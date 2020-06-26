@@ -8,6 +8,7 @@
 
 
 
+
 //Variables globales
 Mapa *mapa;
 Nave *player;
@@ -17,8 +18,8 @@ Enemigo *penemigo;
 
 
 int main(){
-    const int MAXDISPAROSRED=5;
-    const int MAXDISPAROSBLUE=5;
+    const int MAXDISPAROSRED=4;
+    const int MAXDISPAROSBLUE=4;
     const int WindowWidth = 820;
     const int WindowHeigh = 840;
     //Nave* jugador;
@@ -40,6 +41,7 @@ int main(){
     Enemigo pnave1(86.0, 78.0);
 
 
+
     //Inicializacion de disparos
 
     Bala disparo[MAXDISPAROSRED];
@@ -55,6 +57,7 @@ int main(){
         disparo[i].color = RED;
         disparo[i].activo = false;
         disparo[i].Lifespown = 0;
+        disparo[i].damage = 100;
 
         // Disparos del jugadores numero 1
         disparo1[i].radio = 10;
@@ -72,6 +75,7 @@ int main(){
         disparo1[i].color = BLUE;
         disparo1[i].activo = false;
         disparo1[i].Lifespown = 0;
+        disparo1[i].damage = 100;
 
     }
 
@@ -211,6 +215,8 @@ int main(){
                 }
 
             }
+
+
 
 
 
