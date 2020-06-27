@@ -28,6 +28,7 @@ int main(){
     SetTargetFPS(60);
     float x = 32.0f, y=32.0f;
 
+
     mapa = new Mapa ("../resources/Map/mapa.json");
 
     player = new Nave ("resources/ship.png", mapa->player_init_pos);
@@ -251,8 +252,8 @@ int main(){
 
 
 
-              static float rotation = 0.5f;
-               rotation ++;
+             static float rotation = 0.5f;
+             rotation ++;
 
              EndDrawing();
 
