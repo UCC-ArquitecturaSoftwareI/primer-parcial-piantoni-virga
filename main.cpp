@@ -5,6 +5,9 @@
 #include "clases/Nave.h"
 #include "clases/mapa.h"
 #include "clases/Enemigo.h"
+#if defined(PLATFORM_WEB) // Para crear HTML5
+#include <emscripten/emscripten.h>
+#endif
 
 
 //Variables globales
@@ -14,11 +17,16 @@ Enemigo *penemigo;
 
 
 int main() {
+
     const int MAXDISPAROSRED = 4;
     const int MAXDISPAROSBLUE = 4;
     const int WindowWidth = 820;
     const int WindowHeigh = 840;
     //Nave* jugador;
+#if defined(PLATFORM_WEB)  // Para versión Web.
+    emscripten_set_main_loop(w.UpdateDrawFrame, 0, 1);
+#else
+
     InitWindow(WindowWidth, WindowHeigh, "EL JUEGO");
 
     SetTargetFPS(60);
@@ -186,7 +194,6 @@ int main() {
                     penemigo->vida = ((penemigo->vida) - (disparo->damage));
                     if (penemigo->vida == 0) {
                         std::cout << "Fin del juego, Gana jugador 0" << std::endl;
-                        penemigo->vida +1000;
                     }
                     std::cout << "Jugador 1 Alcanzado  " << std::endl;
                     disparo[i].Lifespown = 0;
@@ -233,7 +240,6 @@ int main() {
                     //std::cout<< player->vida << std::endl;
                     if (player->vida == 0) {
                         std::cout << "Fin del juego, Gana jugador 1" << std::endl;
-                        player->vida +1000;
                     }
                     std::cout << "Jugador 0 Alcanzado por bala  " << std::endl;
                     disparo1[i].Lifespown = 0;
@@ -252,6 +258,7 @@ int main() {
 
 
     }
+#endif
 
 
 }
