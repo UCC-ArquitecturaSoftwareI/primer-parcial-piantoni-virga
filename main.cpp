@@ -186,6 +186,7 @@ int main() {
                     penemigo->vida = ((penemigo->vida) - (disparo->damage));
                     if (penemigo->vida == 0) {
                         std::cout << "Fin del juego, Gana jugador 0" << std::endl;
+                        penemigo->vida +1000;
                     }
                     std::cout << "Jugador 1 Alcanzado  " << std::endl;
                     disparo[i].Lifespown = 0;
@@ -232,6 +233,7 @@ int main() {
                     //std::cout<< player->vida << std::endl;
                     if (player->vida == 0) {
                         std::cout << "Fin del juego, Gana jugador 1" << std::endl;
+                        player->vida +1000;
                     }
                     std::cout << "Jugador 0 Alcanzado por bala  " << std::endl;
                     disparo1[i].Lifespown = 0;
