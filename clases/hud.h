@@ -12,6 +12,7 @@
 void hudInit();
 
 void menuInit();
+
 void menuDraw();
 
 void hudUnload();

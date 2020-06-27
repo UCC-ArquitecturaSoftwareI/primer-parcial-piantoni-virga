@@ -10,7 +10,6 @@
 #define RAYLIBTEMPLATE_BALA_H
 
 
-
 class Bala {
 
 
@@ -21,7 +20,9 @@ public:
     int Lifespown;
     int damage;
     float radio;
+
     void moveposition();
+
     void acelerar();
 
 

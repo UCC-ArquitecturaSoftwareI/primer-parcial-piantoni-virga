@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cmath>
 #include "mapa.h"
+
 using namespace std;
 
 
@@ -30,13 +31,11 @@ Mapa::Mapa(std::string file) {
 
 
         //Inicializamos la posicion del enemigo, pasandolo por el id
-        auto eobjs = map.getLayer( "Objetos");
+        auto eobjs = map.getLayer("Objetos");
         tson::Object *penemigo = eobjs->getObj(14);
         enemigo_init_pos.x = penemigo->getPosition().x;
         enemigo_init_pos.y = penemigo->getPosition().y;
         std::cout << "Vida jugador 2: " << penemigo->get<int>("Vida") << std::endl;
-
-
 
 
         for (auto &obj : objs->getObjects()) {
@@ -48,8 +47,8 @@ Mapa::Mapa(std::string file) {
 
 }
 
-void:: Mapa::dibujar() {
-  Rectangle tile_rec;
+void ::Mapa::dibujar() {
+    Rectangle tile_rec;
     tile_rec.x = 0.0f;
     tile_rec.y = 0.0f;
     tile_rec.width = map.getTileSize().x;
@@ -61,7 +60,7 @@ void:: Mapa::dibujar() {
     int space = map_tileset->getSpacing();
 
 
-      auto &c = map.getBackgroundColor();
+    auto &c = map.getBackgroundColor();
     ClearBackground({c.r, c.g, c.b, c.a}); //Limpio la pantalla en blanco
 
     for (auto nombre: {"Espacio"}) {
@@ -70,8 +69,8 @@ void:: Mapa::dibujar() {
 
             if (tile != nullptr) {
                 Vector2 position = {
-                                    (float) std::get<0>(pos) * map.getTileSize().x,
-                                    (float) std::get<1>(pos) * map.getTileSize().y};
+                        (float) std::get<0>(pos) * map.getTileSize().x,
+                        (float) std::get<1>(pos) * map.getTileSize().y};
 
                 int baseTilePosition = (tile->getId() - firstId);
 

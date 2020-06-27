@@ -7,8 +7,8 @@
 #include "bala.h"
 
 void Bala::moveposition() {
-    position.x+30;
-    position.y+30;
+    position.x + 30;
+    position.y + 30;
 }
 
 
