@@ -1,8 +1,0 @@
-//
-// Created by Francisco Piantoni on 27/06/2020.
-//
-
-#ifndef RAYLIBTEMPLATE_GAMEPLAY_H
-#define RAYLIBTEMPLATE_GAMEPLAY_H
-
-#endif //RAYLIBTEMPLATE_GAMEPLAY_H

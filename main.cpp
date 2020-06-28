@@ -5,6 +5,8 @@
 #include "clases/Nave.h"
 #include "clases/mapa.h"
 #include "clases/Enemigo.h"
+#include "clases/hud.h"
+
 #if defined(PLATFORM_WEB) // Para crear HTML5
 #include <emscripten/emscripten.h>
 #endif
@@ -14,6 +16,7 @@
 Mapa *mapa;
 Nave *player;
 Enemigo *penemigo;
+int isPlayerinMenu = 1;
 
 
 int main() {
@@ -39,6 +42,7 @@ int main() {
 
     penemigo = new Enemigo("resources/Images/Enemigo.png", mapa->enemigo_init_pos);
 
+    menuInit();
     //Tamaño del jugador 1
     Nave pnave(86.0, 40.0);
 
@@ -111,12 +115,26 @@ int main() {
 
 
         BeginDrawing();
-        mapa->dibujar();
-        player->draw();
-        penemigo->draw();
-
+        if (isPlayerinMenu == 1) {
+            menuDraw();
+        } else {
+            mapa->dibujar();
+            player->draw();
+            penemigo->draw();
+        }
         //ClearBackground(BLACK);
 
+        if(isPlayerinMenu==1)
+        {
+            //std::cout<<GetMousePosition().x<<" , "<<GetMousePosition().y<<std::endl;
+            if(GetMousePosition().x-(450)<=50 && std::abs(GetMousePosition().y-(500)) <=20
+               && IsMouseButtonDown(MOUSE_LEFT_BUTTON))
+                isPlayerinMenu=0;
+
+            if(GetMousePosition().x-(525)<=50 && std::abs(GetMousePosition().y-(400)) <=20
+               && IsMouseButtonDown(MOUSE_LEFT_BUTTON))
+                CloseWindow();
+        }
 
 
         //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA DEL JUGADOR 0
