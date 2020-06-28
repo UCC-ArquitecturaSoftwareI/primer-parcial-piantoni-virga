@@ -24,7 +24,7 @@ int main() {
     const int MAXDISPAROSBLUE = 4;
     const int WindowWidth = 820;
     const int WindowHeigh = 840;
-    //Nave* jugador;
+
 #if defined(PLATFORM_WEB)  // Para versión Web.
     emscripten_set_main_loop(w.UpdateDrawFrame, 0, 1);
 #else
@@ -42,10 +42,10 @@ int main() {
     penemigo = new Enemigo("resources/Images/Enemigo.png", mapa->enemigo_init_pos);
 
     menuInit();
-    //Tamaño del jugador 1
+    //Tamaño del jugador 0
     Nave pnave(86.0, 40.0);
 
-    //Tamaño del jugador 2
+    //Tamaño del jugador 1
     Enemigo pnave1(86.0, 40.0);
 
 
@@ -68,11 +68,7 @@ int main() {
         disparo[i].Lifespown = 0;
         disparo[i].damage = 100;
 
-        // Disparos del jugadores numero 1
-        disparo1[i].radio = 10;
-        disparo1[i].color = BLUE;
-        disparo1[i].activo = false;
-        disparo1[i].Lifespown = 0;
+
 
     }
 
@@ -175,11 +171,11 @@ int main() {
         // "FOR"para todas las intrucciones que tiene que realizar la bala del jugador 0.
         for (int i = 0; i < MAXDISPAROSRED; i++) {
             if (disparo[i].activo) {
-                disparo[i].position.y -= 10;    //Esta linea nos dice la direccion de la bala, en conjkunto para los dos jugadores
+                disparo[i].position.y -= 10;
 
                 disparo[i].Lifespown++;
 
-                penemigo->jugador1Colision.x = penemigo->enemigo_pos.x;         // CAMBIAR EL PUNTO DE EL TILED A UN RECTANGULO, YA QUE LA ZONA DEL RECTANGULO VA HACIA LA DERECHA Y NO HACIA LA IZQUUERDA
+                penemigo->jugador1Colision.x = penemigo->enemigo_pos.x;   // TODO: Change rectangle position to match player width.
                 penemigo->jugador1Colision.y = penemigo->enemigo_pos.y;
                 penemigo->jugador1Colision.width = pnave1.getWidth();
 
@@ -205,7 +201,7 @@ int main() {
 
                     penemigo->vida = ((penemigo->vida) - (disparo->damage));
                     if (penemigo->vida == 0) {
-                        std::cout << "Fin del juego, Gana jugador 0" << std::endl;
+                        std::cout << "Fin de la Ronda, Gana jugador 0" << std::endl;
                         penemigo->vida += 1000;
                     }
                     std::cout << "Jugador 1 Alcanzado  " << std::endl;
@@ -220,7 +216,7 @@ int main() {
         // "FOR" para todas las intrucciones que tiene que realizar la bala del jugador 1.
         for (int i = 0; i < MAXDISPAROSBLUE; i++) {
             if (disparo1[i].activo) {
-                disparo1[i].position.y += 10;    //Esta linea nos dice la direccion de la bala, en conjkunto para los dos jugadores
+                disparo1[i].position.y += 10;
 
                 disparo1[i].Lifespown++;
 
@@ -250,9 +246,9 @@ int main() {
                 if (CheckCollisionCircleRec(disparo1[i].position, disparo1[i].radio, player->jugador0Colision)) {
 
                     player->vida = ((player->vida) - (disparo->damage));
-                    //std::cout<< player->vida << std::endl;
+
                     if (player->vida == 0) {
-                        std::cout << "Fin del juego, Gana jugador 1" << std::endl;
+                        std::cout << "Fin de la Ronda, Gana jugador 1" << std::endl;
                         player->vida += 1000;
                     }
                     std::cout << "Jugador 0 Alcanzado  " << std::endl;
