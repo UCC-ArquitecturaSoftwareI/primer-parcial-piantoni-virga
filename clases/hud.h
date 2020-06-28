@@ -8,14 +8,10 @@
 
 #include <raylib.h>
 
-
-void hudInit();
-
 void menuInit();
 
 void menuDraw();
 
-void hudUnload();
 
 #endif //RAYLIBTEMPLATE_HUD_H
 
