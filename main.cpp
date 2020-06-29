@@ -61,7 +61,6 @@ int main() {
 
         //Disparos del Jugador numero 0
         disparo[i].position = player->getNavePos();
-        disparo1[i].position = penemigo->getEnemigoPos();
         disparo[i].radio = 10;
         disparo[i].color = RED;
         disparo[i].activo = false;
@@ -202,6 +201,7 @@ int main() {
                     penemigo->vida = ((penemigo->vida) - (disparo->damage));
                     if (penemigo->vida == 0) {
                         std::cout << "Fin de la Ronda, Gana jugador 0" << std::endl;
+                        player->vida = 1000;
                         penemigo->vida += 1000;
                     }
                     std::cout << "Jugador 1 Alcanzado  " << std::endl;
@@ -249,6 +249,7 @@ int main() {
 
                     if (player->vida == 0) {
                         std::cout << "Fin de la Ronda, Gana jugador 1" << std::endl;
+                        penemigo->vida = 1000;
                         player->vida += 1000;
                     }
                     std::cout << "Jugador 0 Alcanzado  " << std::endl;
