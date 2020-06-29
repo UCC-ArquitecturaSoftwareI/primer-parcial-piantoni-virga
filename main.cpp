@@ -33,7 +33,6 @@ int main() {
     InitWindow(WindowWidth, WindowHeigh, "EL JUEGO");
 
     SetTargetFPS(60);
-    float x = 32.0f, y = 32.0f;
 
 
     mapa = new Mapa("../resources/Map/mapa.json");
@@ -65,9 +64,8 @@ int main() {
         disparo[i].radio = 10;
         disparo[i].color = RED;
         disparo[i].activo = false;
-        disparo[i].Lifespown = 0;
+        disparo[i].VidaUtil = 0;
         disparo[i].damage = 100;
-
 
 
     }
@@ -79,7 +77,7 @@ int main() {
         disparo1[i].radio = 10;
         disparo1[i].color = BLUE;
         disparo1[i].activo = false;
-        disparo1[i].Lifespown = 0;
+        disparo1[i].VidaUtil = 0;
         disparo1[i].damage = 100;
 
     }
@@ -113,12 +111,12 @@ int main() {
 
 
         BeginDrawing();
-        if( isPlayerinMenu == 1){
+        if (isPlayerinMenu == 1) {
             menuDraw();
             if (IsKeyPressed(KEY_SPACE)) {
                 isPlayerinMenu = 0;
             }
-        }else{
+        } else {
             mapa->dibujar();
             player->draw();
             penemigo->draw();
@@ -177,7 +175,7 @@ int main() {
             if (disparo[i].activo) {
                 disparo[i].position.y -= 10;
 
-                disparo[i].Lifespown++;
+                disparo[i].VidaUtil++;
 
                 penemigo->jugador1Colision.x = penemigo->enemigo_pos.x - ((pnave1.getWidth()) / 2);
                 penemigo->jugador1Colision.y = penemigo->enemigo_pos.y;
@@ -194,9 +192,9 @@ int main() {
 
                 //cuan lejos puede llegar la bala hasta ser desactivada
 
-                if (disparo[i].Lifespown >= 80) {
+                if (disparo[i].VidaUtil >= 80) {
                     disparo[i].position = player->getNavePos();
-                    disparo[i].Lifespown = 0;
+                    disparo[i].VidaUtil = 0;
                     disparo[i].activo = false;
 
                 }
@@ -210,7 +208,7 @@ int main() {
                         penemigo->vida += 1000;
                     }
                     std::cout << "Jugador 1 Alcanzado  " << std::endl;
-                    disparo[i].Lifespown = 0;
+                    disparo[i].VidaUtil = 0;
                     disparo[i].activo = false;
                 }
 
@@ -223,7 +221,7 @@ int main() {
             if (disparo1[i].activo) {
                 disparo1[i].position.y += 10;
 
-                disparo1[i].Lifespown++;
+                disparo1[i].VidaUtil++;
 
                 player->jugador0Colision.x = player->nave_pos.x - ((pnave.getWidth()) / 2);
                 player->jugador0Colision.y = player->nave_pos.y;
@@ -241,9 +239,9 @@ int main() {
 
                 //cuan lejos puede llegar la bala hasta ser desactivada
 
-                if (disparo1[i].Lifespown >= 80) {
+                if (disparo1[i].VidaUtil >= 80) {
                     disparo1[i].position = penemigo->getEnemigoPos();
-                    disparo1[i].Lifespown = 0;
+                    disparo1[i].VidaUtil = 0;
                     disparo1[i].activo = false;
 
                 }
@@ -258,7 +256,7 @@ int main() {
                         player->vida += 1000;
                     }
                     std::cout << "Jugador 0 Alcanzado  " << std::endl;
-                    disparo1[i].Lifespown = 0;
+                    disparo1[i].VidaUtil = 0;
                     disparo1[i].activo = false;
                 }
 

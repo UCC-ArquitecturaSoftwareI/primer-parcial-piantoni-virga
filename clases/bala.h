@@ -21,13 +21,10 @@ public:
     bool activo;
     Color color;
     Vector2 position;
-    int Lifespown;
+    int VidaUtil;
     int damage;
     float radio;
 
-    void moveposition();
-
-    void acelerar();
 
 
 };
