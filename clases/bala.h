@@ -1,6 +1,10 @@
-//
-// Created by santo on 25/4/2020.
-//
+/**
+ * @title       Clase bala
+ * @file        bala.h
+ * @version     1.0
+ * @author      Francisco Piantoni Vera
+ * @author      Santos Jose Virga
+*/
 #include <raylib.h>
 #include <string>
 #include <iostream>
@@ -31,10 +35,3 @@ public:
 
 #endif //RAYLIBTEMPLATE_BALA_H
 
-
-/*void move_x(float d);
-void move_y(float d);
-void setBalaPos(const Vector2 &balaPos);
-void EliminarBala(const float a , const float b);
-
-const Vector2 &getBalaPos() const;*/

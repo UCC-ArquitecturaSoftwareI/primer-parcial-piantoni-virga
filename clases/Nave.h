@@ -1,6 +1,10 @@
-//
-// Created by martin on 21/3/20.
-//
+/**
+ * @title       Clase Nave
+ * @file        Nave.h
+ * @version     1.0
+ * @author      Francisco Piantoni Vera
+ * @author      Santos Jose Virga
+*/
 #include <raylib.h>
 #include <string>
 

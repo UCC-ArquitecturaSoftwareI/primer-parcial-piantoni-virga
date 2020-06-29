@@ -1,6 +1,10 @@
-//
-// Created by Francisco Piantoni on 27/06/2020.
-//
+/**
+ * @title       Clase hud
+ * @file        hud.h
+ * @version     1.0
+ * @author      Francisco Piantoni Vera
+ * @author      Santos Jose Virga
+*/
 
 #ifndef RAYLIBTEMPLATE_HUD_H
 #define RAYLIBTEMPLATE_HUD_H

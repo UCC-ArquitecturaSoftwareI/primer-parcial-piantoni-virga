@@ -1,6 +1,10 @@
-//
-// Created by Francisco Piantoni on 29/05/2020.
-//
+/**
+ * @title       Clase Enemigo
+ * @file        Enemigo.h
+ * @version     1.0
+ * @author      Francisco Piantoni Vera
+ * @author      Santos Jose Virga
+*/
 
 #ifndef RAYLIBTEMPLATE_MAPA_H
 #define RAYLIBTEMPLATE_MAPA_H
