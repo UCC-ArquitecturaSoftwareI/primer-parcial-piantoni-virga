@@ -85,26 +85,29 @@ int main() {
 
     while (!WindowShouldClose()) {
 
-        // Movimiento del jugador1 con sus respectivas teclas.
-        if (IsKeyDown(KEY_RIGHT)) {
-            player->move_x(5.0f);
+        if (isPlayerinMenu == 0) {
+
+            // Movimiento del jugador1 con sus respectivas teclas.
+            if (IsKeyDown(KEY_RIGHT)) {
+                player->move_x(5.0f);
 
 
-        }
-        if (IsKeyDown(KEY_LEFT)) {
+            }
+            if (IsKeyDown(KEY_LEFT)) {
 
-            player->move_x(-5.0f);
-        }
+                player->move_x(-5.0f);
+            }
 
-        // Movimento del jugador2 con sus respectivas teclas.
-        if (IsKeyDown(KEY_S)) {
-            penemigo->move_x(5.0f);
+            // Movimento del jugador2 con sus respectivas teclas.
+            if (IsKeyDown(KEY_S)) {
+                penemigo->move_x(5.0f);
 
 
-        }
-        if (IsKeyDown(KEY_A)) {
+            }
+            if (IsKeyDown(KEY_A)) {
 
-            penemigo->move_x(-5.0f);
+                penemigo->move_x(-5.0f);
+            }
         }
 
 
@@ -124,30 +127,31 @@ int main() {
         }
         //ClearBackground(BLACK);
 
+        if (isPlayerinMenu == 0) {
 
+            //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA DEL JUGADOR 0
+            if (IsKeyPressed(KEY_M)) {
+                for (int i = 0; i < MAXDISPAROSRED; i++) {
 
-        //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA DEL JUGADOR 0
-        if (IsKeyPressed(KEY_M)) {
-            for (int i = 0; i < MAXDISPAROSRED; i++) {
+                    if (!disparo[i].activo) {
+                        disparo[i].position = player->getNavePos();
 
-                if (!disparo[i].activo) {
-                    disparo[i].position = player->getNavePos();
-
-                    disparo[i].activo = true;
-                    break;
+                        disparo[i].activo = true;
+                        break;
+                    }
                 }
             }
-        }
 
-        //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA DEL JUGADOR 1
-        if (IsKeyPressed(KEY_D)) {
-            for (int i = 0; i < MAXDISPAROSBLUE; i++) {
+            //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA DEL JUGADOR 1
+            if (IsKeyPressed(KEY_D)) {
+                for (int i = 0; i < MAXDISPAROSBLUE; i++) {
 
-                if (!disparo1[i].activo) {
-                    disparo1[i].position = penemigo->getEnemigoPos();
+                    if (!disparo1[i].activo) {
+                        disparo1[i].position = penemigo->getEnemigoPos();
 
-                    disparo1[i].activo = true;
-                    break;
+                        disparo1[i].activo = true;
+                        break;
+                    }
                 }
             }
         }
