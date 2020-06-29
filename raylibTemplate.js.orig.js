@@ -196,7 +196,7 @@ Module['FS_createPath']('/resources', 'Images', true, true);
   }
 
  }
- loadPackage({"files": [{"start": 0, "audio": 1, "end": 2338920, "filename": "/resources/Cyberpunk Moonlight Sonata.mp3"}, {"start": 2338920, "audio": 0, "end": 2345068, "filename": "/resources/.DS_Store"}, {"start": 2345068, "audio": 0, "end": 2347025, "filename": "/resources/ship.png"}, {"start": 2347025, "audio": 0, "end": 2357718, "filename": "/resources/shell.html"}, {"start": 2357718, "audio": 0, "end": 2361662, "filename": "/resources/Map/mapa.json"}, {"start": 2361662, "audio": 0, "end": 2483659, "filename": "/resources/Map/platformIndustrial_sheet@2.png"}, {"start": 2483659, "audio": 0, "end": 2742053, "filename": "/resources/Images/backgruondmenu.png"}, {"start": 2742053, "audio": 0, "end": 2750002, "filename": "/resources/Images/Enemigo.png"}], "remote_package_size": 2750002, "package_uuid": "7048642e-842d-47bc-95ef-30460e5a6604"});
+ loadPackage({"files": [{"start": 0, "audio": 1, "end": 2338920, "filename": "/resources/Cyberpunk Moonlight Sonata.mp3"}, {"start": 2338920, "audio": 0, "end": 2345068, "filename": "/resources/.DS_Store"}, {"start": 2345068, "audio": 0, "end": 2347025, "filename": "/resources/ship.png"}, {"start": 2347025, "audio": 0, "end": 2357718, "filename": "/resources/shell.html"}, {"start": 2357718, "audio": 0, "end": 2361662, "filename": "/resources/Map/mapa.json"}, {"start": 2361662, "audio": 0, "end": 2483659, "filename": "/resources/Map/platformIndustrial_sheet@2.png"}, {"start": 2483659, "audio": 0, "end": 2742053, "filename": "/resources/Images/backgruondmenu.png"}, {"start": 2742053, "audio": 0, "end": 2750002, "filename": "/resources/Images/Enemigo.png"}], "remote_package_size": 2750002, "package_uuid": "7d9e7ab1-651b-4d8f-9830-cdca43a5a1c9"});
 
 })();
 
@@ -18065,12 +18065,12 @@ function _decfloat($f, $c, $bits, $emin, $sign, $pok) {
 }
 
 function _main() {
- var $103 = 0, $105 = 0, $108 = 0, $109 = f0, $121 = 0, $122 = 0, $126 = 0, $13 = 0, $131 = 0, $132 = 0, $136 = f0, $137 = 0, $144 = 0, $146 = 0, $149 = 0, $15 = 0, $150 = 0, $154 = 0, $156 = 0, $159 = 0, $160 = f0, $20 = 0, $21 = 0, $3 = 0, $36 = 0, $41 = 0, $42 = 0, $48 = 0, $53 = 0, $54 = 0, $70 = 0, $71 = 0, $75 = 0, $8 = 0, $80 = 0, $81 = 0, $85 = f0, $86 = 0, $9 = 0, $93 = 0, $95 = 0, $98 = 0, $99 = 0, $Lifespown186 = 0, $Lifespown280 = 0, $a219 = 0, $a314 = 0, $activo112 = 0, $activo178 = 0, $activo272 = 0, $activo92 = 0, $add = 0.0, $add151 = 0.0, $add278 = f0, $agg$tmp = 0, $agg$tmp16 = 0, $agg$tmp210 = 0, $agg$tmp215 = 0, $agg$tmp233 = 0, $agg$tmp305 = 0, $agg$tmp310 = 0, $agg$tmp328 = 0, $agg$tmp4 = 0, $b218 = 0, $b313 = 0, $call = 0, $call$i1$i = 0, $call$i1$i109 = 0, $call$i1$i117 = 0, $call$i1$i125 = 0, $call$i2$i = 0, $call$i2$i112 = 0, $call$i2$i120 = 0, $call$i2$i128 = 0, $call15 = 0, $call248 = 0, $call254 = 0, $call3 = 0, $call345 = 0, $call351 = 0, $conv = 0.0, $conv134 = 0.0, $conv136 = f0, $conv149 = 0.0, $conv157 = 0.0, $conv160 = f0, $conv196 = f0, $conv290 = f0, $disparo = 0, $disparo1 = 0, $g217 = 0, $g312 = 0, $i$0152 = 0, $i106$0145 = 0, $i172$0146 = 0, $i266$0148 = 0, $i33$0151 = 0, $i86$0144 = 0, $inc101 = 0, $inc122 = 0, $jugador0Colision334 = 0, $jugador0Colision334$byval_copy = 0, $jugador1Colision239 = 0, $mapa = 0, $penemigo = 0, $player = 0, $pnave = 0, $pnave1 = 0, $position182 = 0, $position276 = 0, $sub184 = f0, $sub243 = 0, $sub340 = 0, $tmpcast$byval_copy = 0, $vida = 0, $vida251 = 0, $vida337 = 0, $vida348 = 0, $x141 = 0, $x165 = 0, $y183 = 0, $y277 = 0, label = 0, sp = 0, CSE$0 = 0, CSE$1 = 0, CSE$2 = 0, CSE$3 = 0;
+ var $100 = 0, $104 = 0, $106 = 0, $109 = 0, $110 = f0, $122 = 0, $125 = 0, $128 = 0, $13 = 0, $133 = 0, $134 = 0, $138 = f0, $139 = 0, $146 = 0, $148 = 0, $15 = 0, $151 = 0, $152 = 0, $156 = 0, $158 = 0, $161 = 0, $162 = f0, $20 = 0, $21 = 0, $3 = 0, $36 = 0, $41 = 0, $42 = 0, $48 = 0, $53 = 0, $54 = 0, $70 = 0, $73 = 0, $76 = 0, $8 = 0, $81 = 0, $82 = 0, $86 = f0, $87 = 0, $9 = 0, $94 = 0, $96 = 0, $99 = 0, $Lifespown186 = 0, $Lifespown284 = 0, $a223 = 0, $a323 = 0, $activo112 = 0, $activo178 = 0, $activo276 = 0, $activo92 = 0, $add = 0.0, $add151 = 0.0, $add282 = f0, $agg$tmp = 0, $agg$tmp16 = 0, $agg$tmp214 = 0, $agg$tmp219 = 0, $agg$tmp237 = 0, $agg$tmp314 = 0, $agg$tmp319 = 0, $agg$tmp337 = 0, $agg$tmp4 = 0, $b222 = 0, $b322 = 0, $call = 0, $call$i1$i = 0, $call$i1$i109 = 0, $call$i1$i117 = 0, $call$i1$i125 = 0, $call$i2$i = 0, $call$i2$i112 = 0, $call$i2$i120 = 0, $call$i2$i128 = 0, $call15 = 0, $call252 = 0, $call258 = 0, $call3 = 0, $call354 = 0, $call360 = 0, $conv = 0.0, $conv134 = 0.0, $conv136 = f0, $conv149 = 0.0, $conv157 = 0.0, $conv160 = f0, $conv190 = 0.0, $conv193 = f0, $conv200 = f0, $conv288 = 0.0, $conv292 = f0, $conv299 = f0, $disparo = 0, $disparo1 = 0, $g221 = 0, $g321 = 0, $i$0152 = 0, $i106$0145 = 0, $i172$0146 = 0, $i270$0148 = 0, $i33$0151 = 0, $i86$0144 = 0, $inc101 = 0, $inc122 = 0, $jugador0Colision343 = 0, $jugador0Colision343$byval_copy = 0, $jugador1Colision243 = 0, $mapa = 0, $penemigo = 0, $player = 0, $pnave = 0, $pnave1 = 0, $position182 = 0, $position280 = 0, $sub184 = f0, $sub247 = 0, $sub349 = 0, $tmpcast$byval_copy = 0, $vida = 0, $vida255 = 0, $vida346 = 0, $vida357 = 0, $x141 = 0, $x165 = 0, $y183 = 0, $y281 = 0, label = 0, sp = 0, CSE$0 = 0, CSE$1 = 0, CSE$2 = 0, CSE$3 = 0;
  label = 0;
  sp = STACKTOP;
  STACKTOP = STACKTOP + 480 | 0;
  if ((STACKTOP | 0) >= (STACK_MAX | 0)) abortStackOverflow(480);
- $jugador0Colision334$byval_copy = sp + 456 | 0;
+ $jugador0Colision343$byval_copy = sp + 456 | 0;
  $tmpcast$byval_copy = sp + 448 | 0;
  $penemigo = sp + 444 | 0;
  HEAP32[$penemigo >> 2] = 0;
@@ -18085,12 +18085,12 @@ function _main() {
  $pnave1 = sp + 248 | 0;
  $disparo = sp + 112 | 0;
  $disparo1 = sp;
- $agg$tmp210 = sp + 392 | 0;
- $agg$tmp215 = sp + 476 | 0;
- $agg$tmp233 = sp + 240 | 0;
- $agg$tmp305 = sp + 232 | 0;
- $agg$tmp310 = sp + 472 | 0;
- $agg$tmp328 = sp + 224 | 0;
+ $agg$tmp214 = sp + 392 | 0;
+ $agg$tmp219 = sp + 476 | 0;
+ $agg$tmp237 = sp + 240 | 0;
+ $agg$tmp314 = sp + 232 | 0;
+ $agg$tmp319 = sp + 472 | 0;
+ $agg$tmp337 = sp + 224 | 0;
  _InitWindow(820, 840, 21948);
  _SetTargetFPS(60);
  $call = __Znwm(228) | 0;
@@ -18118,8 +18118,8 @@ function _main() {
  HEAP32[$penemigo >> 2] = $call15;
  __ZNSt3__212basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEED2Ev($agg$tmp16);
  __Z8menuInitv();
- __ZN4NaveC2Edd($pnave, 86.0, 40.0);
- __ZN7EnemigoC2Edd($pnave1, 86.0, 40.0);
+ __ZN4NaveC2Edd($pnave, 86.0, 60.0);
+ __ZN7EnemigoC2Edd($pnave1, 86.0, 60.0);
  $i$0152 = 0;
  do {
   $3 = __ZNK4Nave10getNavePosEv(HEAP32[$player >> 2] | 0) | 0;
@@ -18157,13 +18157,13 @@ function _main() {
   $i33$0151 = $i33$0151 + 1 | 0;
  } while (($i33$0151 | 0) != 4);
  if (!(_WindowShouldClose() | 0)) {
-  $g217 = $agg$tmp215 + 1 | 0;
-  $b218 = $agg$tmp215 + 2 | 0;
-  $a219 = $agg$tmp215 + 3 | 0;
+  $g221 = $agg$tmp219 + 1 | 0;
+  $b222 = $agg$tmp219 + 2 | 0;
+  $a223 = $agg$tmp219 + 3 | 0;
   $13 = HEAP32[$disparo + 20 >> 2] | 0;
-  $g312 = $agg$tmp310 + 1 | 0;
-  $b313 = $agg$tmp310 + 2 | 0;
-  $a314 = $agg$tmp310 + 3 | 0;
+  $g321 = $agg$tmp319 + 1 | 0;
+  $b322 = $agg$tmp319 + 2 | 0;
+  $a323 = $agg$tmp319 + 3 | 0;
   do {
    if (!(HEAP32[4360] | 0)) {
     if (_IsKeyDown(262) | 0) __ZN4Nave6move_xEf(HEAP32[$player >> 2] | 0, Math_fround(5.0));
@@ -18253,178 +18253,182 @@ function _main() {
      $Lifespown186 = CSE$2 + 16 | 0;
      $70 = HEAP32[$Lifespown186 >> 2] | 0;
      HEAP32[$Lifespown186 >> 2] = $70 + 1;
-     $71 = HEAP32[$penemigo >> 2] | 0;
-     HEAP32[$71 + 44 >> 2] = HEAP32[$71 + 60 >> 2];
-     HEAP32[$71 + 48 >> 2] = HEAP32[$71 + 64 >> 2];
-     $conv196 = Math_fround(+__ZNK7Enemigo8getWidthEv($pnave1));
-     HEAPF32[(HEAP32[$penemigo >> 2] | 0) + 52 >> 2] = $conv196;
+     $conv190 = +Math_fround(HEAPF32[(HEAP32[$penemigo >> 2] | 0) + 60 >> 2]);
+     $conv193 = Math_fround($conv190 - +__ZNK7Enemigo8getWidthEv($pnave1) * .5);
+     $73 = HEAP32[$penemigo >> 2] | 0;
+     HEAPF32[$73 + 44 >> 2] = $conv193;
+     HEAP32[$73 + 48 >> 2] = HEAP32[$73 + 64 >> 2];
+     $conv200 = Math_fround(+__ZNK7Enemigo8getWidthEv($pnave1));
+     HEAPF32[(HEAP32[$penemigo >> 2] | 0) + 52 >> 2] = $conv200;
      if ($sub184 > Math_fround(800.0)) HEAP8[$activo178 >> 0] = 0; else {
-      $75 = $position182;
-      $80 = HEAP32[$75 + 4 >> 2] | 0;
-      $81 = $agg$tmp210;
-      HEAP32[$81 >> 2] = HEAP32[$75 >> 2];
-      HEAP32[$81 + 4 >> 2] = $80;
-      $85 = Math_fround(HEAPF32[$disparo + ($i172$0146 * 28 | 0) + 24 >> 2]);
-      HEAP8[$agg$tmp215 >> 0] = -26;
-      HEAP8[$g217 >> 0] = 41;
-      HEAP8[$b218 >> 0] = 55;
-      HEAP8[$a219 >> 0] = -1;
-      HEAP32[$tmpcast$byval_copy >> 2] = HEAP32[$agg$tmp210 >> 2];
-      HEAP32[$tmpcast$byval_copy + 4 >> 2] = HEAP32[$agg$tmp210 + 4 >> 2];
-      HEAP8[$jugador0Colision334$byval_copy >> 0] = HEAP8[$agg$tmp215 >> 0] | 0;
-      HEAP8[$jugador0Colision334$byval_copy + 1 >> 0] = HEAP8[$agg$tmp215 + 1 >> 0] | 0;
-      HEAP8[$jugador0Colision334$byval_copy + 2 >> 0] = HEAP8[$agg$tmp215 + 2 >> 0] | 0;
-      HEAP8[$jugador0Colision334$byval_copy + 3 >> 0] = HEAP8[$agg$tmp215 + 3 >> 0] | 0;
-      _DrawCircleV($tmpcast$byval_copy, $85, $jugador0Colision334$byval_copy);
+      $76 = $position182;
+      $81 = HEAP32[$76 + 4 >> 2] | 0;
+      $82 = $agg$tmp214;
+      HEAP32[$82 >> 2] = HEAP32[$76 >> 2];
+      HEAP32[$82 + 4 >> 2] = $81;
+      $86 = Math_fround(HEAPF32[$disparo + ($i172$0146 * 28 | 0) + 24 >> 2]);
+      HEAP8[$agg$tmp219 >> 0] = -26;
+      HEAP8[$g221 >> 0] = 41;
+      HEAP8[$b222 >> 0] = 55;
+      HEAP8[$a223 >> 0] = -1;
+      HEAP32[$tmpcast$byval_copy >> 2] = HEAP32[$agg$tmp214 >> 2];
+      HEAP32[$tmpcast$byval_copy + 4 >> 2] = HEAP32[$agg$tmp214 + 4 >> 2];
+      HEAP8[$jugador0Colision343$byval_copy >> 0] = HEAP8[$agg$tmp219 >> 0] | 0;
+      HEAP8[$jugador0Colision343$byval_copy + 1 >> 0] = HEAP8[$agg$tmp219 + 1 >> 0] | 0;
+      HEAP8[$jugador0Colision343$byval_copy + 2 >> 0] = HEAP8[$agg$tmp219 + 2 >> 0] | 0;
+      HEAP8[$jugador0Colision343$byval_copy + 3 >> 0] = HEAP8[$agg$tmp219 + 3 >> 0] | 0;
+      _DrawCircleV($tmpcast$byval_copy, $86, $jugador0Colision343$byval_copy);
      }
      if (($70 | 0) > 78) {
-      $93 = __ZNK4Nave10getNavePosEv(HEAP32[$player >> 2] | 0) | 0;
-      $95 = HEAP32[$93 >> 2] | 0;
-      $98 = HEAP32[$93 + 4 >> 2] | 0;
-      $99 = $position182;
-      HEAP32[$99 >> 2] = $95;
-      HEAP32[$99 + 4 >> 2] = $98;
+      $94 = __ZNK4Nave10getNavePosEv(HEAP32[$player >> 2] | 0) | 0;
+      $96 = HEAP32[$94 >> 2] | 0;
+      $99 = HEAP32[$94 + 4 >> 2] | 0;
+      $100 = $position182;
+      HEAP32[$100 >> 2] = $96;
+      HEAP32[$100 + 4 >> 2] = $99;
       HEAP32[$Lifespown186 >> 2] = 0;
       HEAP8[$activo178 >> 0] = 0;
-      $105 = $95;
-      $108 = $98;
+      $106 = $96;
+      $109 = $99;
      } else {
-      $86 = $position182;
-      $105 = HEAP32[$86 >> 2] | 0;
-      $108 = HEAP32[$86 + 4 >> 2] | 0;
+      $87 = $position182;
+      $106 = HEAP32[$87 >> 2] | 0;
+      $109 = HEAP32[$87 + 4 >> 2] | 0;
      }
-     $103 = $agg$tmp233;
-     HEAP32[$103 >> 2] = $105;
-     HEAP32[$103 + 4 >> 2] = $108;
-     $109 = Math_fround(HEAPF32[$disparo + ($i172$0146 * 28 | 0) + 24 >> 2]);
-     $jugador1Colision239 = (HEAP32[$penemigo >> 2] | 0) + 44 | 0;
-     HEAP32[$tmpcast$byval_copy >> 2] = HEAP32[$agg$tmp233 >> 2];
-     HEAP32[$tmpcast$byval_copy + 4 >> 2] = HEAP32[$agg$tmp233 + 4 >> 2];
-     HEAP32[$jugador0Colision334$byval_copy >> 2] = HEAP32[$jugador1Colision239 >> 2];
-     HEAP32[$jugador0Colision334$byval_copy + 4 >> 2] = HEAP32[$jugador1Colision239 + 4 >> 2];
-     HEAP32[$jugador0Colision334$byval_copy + 8 >> 2] = HEAP32[$jugador1Colision239 + 8 >> 2];
-     HEAP32[$jugador0Colision334$byval_copy + 12 >> 2] = HEAP32[$jugador1Colision239 + 12 >> 2];
-     if (_CheckCollisionCircleRec($tmpcast$byval_copy, $109, $jugador0Colision334$byval_copy) | 0) {
+     $104 = $agg$tmp237;
+     HEAP32[$104 >> 2] = $106;
+     HEAP32[$104 + 4 >> 2] = $109;
+     $110 = Math_fround(HEAPF32[$disparo + ($i172$0146 * 28 | 0) + 24 >> 2]);
+     $jugador1Colision243 = (HEAP32[$penemigo >> 2] | 0) + 44 | 0;
+     HEAP32[$tmpcast$byval_copy >> 2] = HEAP32[$agg$tmp237 >> 2];
+     HEAP32[$tmpcast$byval_copy + 4 >> 2] = HEAP32[$agg$tmp237 + 4 >> 2];
+     HEAP32[$jugador0Colision343$byval_copy >> 2] = HEAP32[$jugador1Colision243 >> 2];
+     HEAP32[$jugador0Colision343$byval_copy + 4 >> 2] = HEAP32[$jugador1Colision243 + 4 >> 2];
+     HEAP32[$jugador0Colision343$byval_copy + 8 >> 2] = HEAP32[$jugador1Colision243 + 8 >> 2];
+     HEAP32[$jugador0Colision343$byval_copy + 12 >> 2] = HEAP32[$jugador1Colision243 + 12 >> 2];
+     if (_CheckCollisionCircleRec($tmpcast$byval_copy, $110, $jugador0Colision343$byval_copy) | 0) {
       $vida = (HEAP32[$penemigo >> 2] | 0) + 36 | 0;
-      $sub243 = (HEAP32[$vida >> 2] | 0) - $13 | 0;
-      HEAP32[$vida >> 2] = $sub243;
-      if (!$sub243) {
-       $call248 = __ZNSt3__2lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(60552, 22032) | 0;
-       __ZNKSt3__28ios_base6getlocEv($jugador0Colision334$byval_copy, $call248 + (HEAP32[(HEAP32[$call248 >> 2] | 0) + -12 >> 2] | 0) | 0);
-       $call$i1$i = __ZNKSt3__26locale9use_facetERNS0_2idE($jugador0Colision334$byval_copy, 61424) | 0;
+      $sub247 = (HEAP32[$vida >> 2] | 0) - $13 | 0;
+      HEAP32[$vida >> 2] = $sub247;
+      if (!$sub247) {
+       $call252 = __ZNSt3__2lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(60552, 22032) | 0;
+       __ZNKSt3__28ios_base6getlocEv($jugador0Colision343$byval_copy, $call252 + (HEAP32[(HEAP32[$call252 >> 2] | 0) + -12 >> 2] | 0) | 0);
+       $call$i1$i = __ZNKSt3__26locale9use_facetERNS0_2idE($jugador0Colision343$byval_copy, 61424) | 0;
        $call$i2$i = FUNCTION_TABLE_iii[HEAP32[(HEAP32[$call$i1$i >> 2] | 0) + 28 >> 2] & 31]($call$i1$i, 10) | 0;
-       __ZNSt3__26localeD2Ev($jugador0Colision334$byval_copy);
-       __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE3putEc($call248, $call$i2$i) | 0;
-       __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE5flushEv($call248) | 0;
+       __ZNSt3__26localeD2Ev($jugador0Colision343$byval_copy);
+       __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE3putEc($call252, $call$i2$i) | 0;
+       __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE5flushEv($call252) | 0;
        HEAP32[(HEAP32[$player >> 2] | 0) + 36 >> 2] = 1e3;
-       $vida251 = (HEAP32[$penemigo >> 2] | 0) + 36 | 0;
-       HEAP32[$vida251 >> 2] = (HEAP32[$vida251 >> 2] | 0) + 1e3;
+       $vida255 = (HEAP32[$penemigo >> 2] | 0) + 36 | 0;
+       HEAP32[$vida255 >> 2] = (HEAP32[$vida255 >> 2] | 0) + 1e3;
       }
-      $call254 = __ZNSt3__2lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(60552, 22064) | 0;
-      __ZNKSt3__28ios_base6getlocEv($jugador0Colision334$byval_copy, $call254 + (HEAP32[(HEAP32[$call254 >> 2] | 0) + -12 >> 2] | 0) | 0);
-      $call$i1$i109 = __ZNKSt3__26locale9use_facetERNS0_2idE($jugador0Colision334$byval_copy, 61424) | 0;
+      $call258 = __ZNSt3__2lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(60552, 22064) | 0;
+      __ZNKSt3__28ios_base6getlocEv($jugador0Colision343$byval_copy, $call258 + (HEAP32[(HEAP32[$call258 >> 2] | 0) + -12 >> 2] | 0) | 0);
+      $call$i1$i109 = __ZNKSt3__26locale9use_facetERNS0_2idE($jugador0Colision343$byval_copy, 61424) | 0;
       $call$i2$i112 = FUNCTION_TABLE_iii[HEAP32[(HEAP32[$call$i1$i109 >> 2] | 0) + 28 >> 2] & 31]($call$i1$i109, 10) | 0;
-      __ZNSt3__26localeD2Ev($jugador0Colision334$byval_copy);
-      __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE3putEc($call254, $call$i2$i112) | 0;
-      __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE5flushEv($call254) | 0;
+      __ZNSt3__26localeD2Ev($jugador0Colision343$byval_copy);
+      __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE3putEc($call258, $call$i2$i112) | 0;
+      __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE5flushEv($call258) | 0;
       HEAP32[$Lifespown186 >> 2] = 0;
       HEAP8[$activo178 >> 0] = 0;
      }
     }
     $i172$0146 = $i172$0146 + 1 | 0;
    } while ($i172$0146 >>> 0 < 4);
-   $i266$0148 = 0;
+   $i270$0148 = 0;
    do {
-    $activo272 = $disparo1 + ($i266$0148 * 28 | 0) | 0;
-    if (HEAP8[$activo272 >> 0] | 0) {
-     CSE$3 = $disparo1 + ($i266$0148 * 28 | 0) | 0;
-     $position276 = CSE$3 + 8 | 0;
-     $y277 = CSE$3 + 12 | 0;
-     $add278 = Math_fround(Math_fround(HEAPF32[$y277 >> 2]) + Math_fround(10.0));
-     HEAPF32[$y277 >> 2] = $add278;
-     $Lifespown280 = CSE$3 + 16 | 0;
-     $121 = HEAP32[$Lifespown280 >> 2] | 0;
-     HEAP32[$Lifespown280 >> 2] = $121 + 1;
-     $122 = HEAP32[$player >> 2] | 0;
-     HEAP32[$122 + 44 >> 2] = HEAP32[$122 + 60 >> 2];
-     HEAP32[$122 + 48 >> 2] = HEAP32[$122 + 64 >> 2];
-     $conv290 = Math_fround(+__ZNK4Nave8getWidthEv($pnave));
-     HEAPF32[(HEAP32[$player >> 2] | 0) + 52 >> 2] = $conv290;
-     if ($add278 < Math_fround(0.0)) HEAP8[$activo272 >> 0] = 0; else {
-      $126 = $position276;
-      $131 = HEAP32[$126 + 4 >> 2] | 0;
-      $132 = $agg$tmp305;
-      HEAP32[$132 >> 2] = HEAP32[$126 >> 2];
-      HEAP32[$132 + 4 >> 2] = $131;
-      $136 = Math_fround(HEAPF32[$disparo1 + ($i266$0148 * 28 | 0) + 24 >> 2]);
-      HEAP8[$agg$tmp310 >> 0] = 0;
-      HEAP8[$g312 >> 0] = 121;
-      HEAP8[$b313 >> 0] = -15;
-      HEAP8[$a314 >> 0] = -1;
-      HEAP32[$tmpcast$byval_copy >> 2] = HEAP32[$agg$tmp305 >> 2];
-      HEAP32[$tmpcast$byval_copy + 4 >> 2] = HEAP32[$agg$tmp305 + 4 >> 2];
-      HEAP8[$jugador0Colision334$byval_copy >> 0] = HEAP8[$agg$tmp310 >> 0] | 0;
-      HEAP8[$jugador0Colision334$byval_copy + 1 >> 0] = HEAP8[$agg$tmp310 + 1 >> 0] | 0;
-      HEAP8[$jugador0Colision334$byval_copy + 2 >> 0] = HEAP8[$agg$tmp310 + 2 >> 0] | 0;
-      HEAP8[$jugador0Colision334$byval_copy + 3 >> 0] = HEAP8[$agg$tmp310 + 3 >> 0] | 0;
-      _DrawCircleV($tmpcast$byval_copy, $136, $jugador0Colision334$byval_copy);
+    $activo276 = $disparo1 + ($i270$0148 * 28 | 0) | 0;
+    if (HEAP8[$activo276 >> 0] | 0) {
+     CSE$3 = $disparo1 + ($i270$0148 * 28 | 0) | 0;
+     $position280 = CSE$3 + 8 | 0;
+     $y281 = CSE$3 + 12 | 0;
+     $add282 = Math_fround(Math_fround(HEAPF32[$y281 >> 2]) + Math_fround(10.0));
+     HEAPF32[$y281 >> 2] = $add282;
+     $Lifespown284 = CSE$3 + 16 | 0;
+     $122 = HEAP32[$Lifespown284 >> 2] | 0;
+     HEAP32[$Lifespown284 >> 2] = $122 + 1;
+     $conv288 = +Math_fround(HEAPF32[(HEAP32[$player >> 2] | 0) + 60 >> 2]);
+     $conv292 = Math_fround($conv288 - +__ZNK4Nave8getWidthEv($pnave) * .5);
+     $125 = HEAP32[$player >> 2] | 0;
+     HEAPF32[$125 + 44 >> 2] = $conv292;
+     HEAP32[$125 + 48 >> 2] = HEAP32[$125 + 64 >> 2];
+     $conv299 = Math_fround(+__ZNK4Nave8getWidthEv($pnave));
+     HEAPF32[(HEAP32[$player >> 2] | 0) + 52 >> 2] = $conv299;
+     if ($add282 < Math_fround(0.0)) HEAP8[$activo276 >> 0] = 0; else {
+      $128 = $position280;
+      $133 = HEAP32[$128 + 4 >> 2] | 0;
+      $134 = $agg$tmp314;
+      HEAP32[$134 >> 2] = HEAP32[$128 >> 2];
+      HEAP32[$134 + 4 >> 2] = $133;
+      $138 = Math_fround(HEAPF32[$disparo1 + ($i270$0148 * 28 | 0) + 24 >> 2]);
+      HEAP8[$agg$tmp319 >> 0] = 0;
+      HEAP8[$g321 >> 0] = 121;
+      HEAP8[$b322 >> 0] = -15;
+      HEAP8[$a323 >> 0] = -1;
+      HEAP32[$tmpcast$byval_copy >> 2] = HEAP32[$agg$tmp314 >> 2];
+      HEAP32[$tmpcast$byval_copy + 4 >> 2] = HEAP32[$agg$tmp314 + 4 >> 2];
+      HEAP8[$jugador0Colision343$byval_copy >> 0] = HEAP8[$agg$tmp319 >> 0] | 0;
+      HEAP8[$jugador0Colision343$byval_copy + 1 >> 0] = HEAP8[$agg$tmp319 + 1 >> 0] | 0;
+      HEAP8[$jugador0Colision343$byval_copy + 2 >> 0] = HEAP8[$agg$tmp319 + 2 >> 0] | 0;
+      HEAP8[$jugador0Colision343$byval_copy + 3 >> 0] = HEAP8[$agg$tmp319 + 3 >> 0] | 0;
+      _DrawCircleV($tmpcast$byval_copy, $138, $jugador0Colision343$byval_copy);
      }
-     if (($121 | 0) > 78) {
-      $144 = __ZNK7Enemigo13getEnemigoPosEv(HEAP32[$penemigo >> 2] | 0) | 0;
-      $146 = HEAP32[$144 >> 2] | 0;
-      $149 = HEAP32[$144 + 4 >> 2] | 0;
-      $150 = $position276;
-      HEAP32[$150 >> 2] = $146;
-      HEAP32[$150 + 4 >> 2] = $149;
-      HEAP32[$Lifespown280 >> 2] = 0;
-      HEAP8[$activo272 >> 0] = 0;
-      $156 = $146;
-      $159 = $149;
+     if (($122 | 0) > 78) {
+      $146 = __ZNK7Enemigo13getEnemigoPosEv(HEAP32[$penemigo >> 2] | 0) | 0;
+      $148 = HEAP32[$146 >> 2] | 0;
+      $151 = HEAP32[$146 + 4 >> 2] | 0;
+      $152 = $position280;
+      HEAP32[$152 >> 2] = $148;
+      HEAP32[$152 + 4 >> 2] = $151;
+      HEAP32[$Lifespown284 >> 2] = 0;
+      HEAP8[$activo276 >> 0] = 0;
+      $158 = $148;
+      $161 = $151;
      } else {
-      $137 = $position276;
-      $156 = HEAP32[$137 >> 2] | 0;
-      $159 = HEAP32[$137 + 4 >> 2] | 0;
+      $139 = $position280;
+      $158 = HEAP32[$139 >> 2] | 0;
+      $161 = HEAP32[$139 + 4 >> 2] | 0;
      }
-     $154 = $agg$tmp328;
-     HEAP32[$154 >> 2] = $156;
-     HEAP32[$154 + 4 >> 2] = $159;
-     $160 = Math_fround(HEAPF32[$disparo1 + ($i266$0148 * 28 | 0) + 24 >> 2]);
-     $jugador0Colision334 = (HEAP32[$player >> 2] | 0) + 44 | 0;
-     HEAP32[$tmpcast$byval_copy >> 2] = HEAP32[$agg$tmp328 >> 2];
-     HEAP32[$tmpcast$byval_copy + 4 >> 2] = HEAP32[$agg$tmp328 + 4 >> 2];
-     HEAP32[$jugador0Colision334$byval_copy >> 2] = HEAP32[$jugador0Colision334 >> 2];
-     HEAP32[$jugador0Colision334$byval_copy + 4 >> 2] = HEAP32[$jugador0Colision334 + 4 >> 2];
-     HEAP32[$jugador0Colision334$byval_copy + 8 >> 2] = HEAP32[$jugador0Colision334 + 8 >> 2];
-     HEAP32[$jugador0Colision334$byval_copy + 12 >> 2] = HEAP32[$jugador0Colision334 + 12 >> 2];
-     if (_CheckCollisionCircleRec($tmpcast$byval_copy, $160, $jugador0Colision334$byval_copy) | 0) {
-      $vida337 = (HEAP32[$player >> 2] | 0) + 36 | 0;
-      $sub340 = (HEAP32[$vida337 >> 2] | 0) - $13 | 0;
-      HEAP32[$vida337 >> 2] = $sub340;
-      if (!$sub340) {
-       $call345 = __ZNSt3__2lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(60552, 22086) | 0;
-       __ZNKSt3__28ios_base6getlocEv($jugador0Colision334$byval_copy, $call345 + (HEAP32[(HEAP32[$call345 >> 2] | 0) + -12 >> 2] | 0) | 0);
-       $call$i1$i117 = __ZNKSt3__26locale9use_facetERNS0_2idE($jugador0Colision334$byval_copy, 61424) | 0;
+     $156 = $agg$tmp337;
+     HEAP32[$156 >> 2] = $158;
+     HEAP32[$156 + 4 >> 2] = $161;
+     $162 = Math_fround(HEAPF32[$disparo1 + ($i270$0148 * 28 | 0) + 24 >> 2]);
+     $jugador0Colision343 = (HEAP32[$player >> 2] | 0) + 44 | 0;
+     HEAP32[$tmpcast$byval_copy >> 2] = HEAP32[$agg$tmp337 >> 2];
+     HEAP32[$tmpcast$byval_copy + 4 >> 2] = HEAP32[$agg$tmp337 + 4 >> 2];
+     HEAP32[$jugador0Colision343$byval_copy >> 2] = HEAP32[$jugador0Colision343 >> 2];
+     HEAP32[$jugador0Colision343$byval_copy + 4 >> 2] = HEAP32[$jugador0Colision343 + 4 >> 2];
+     HEAP32[$jugador0Colision343$byval_copy + 8 >> 2] = HEAP32[$jugador0Colision343 + 8 >> 2];
+     HEAP32[$jugador0Colision343$byval_copy + 12 >> 2] = HEAP32[$jugador0Colision343 + 12 >> 2];
+     if (_CheckCollisionCircleRec($tmpcast$byval_copy, $162, $jugador0Colision343$byval_copy) | 0) {
+      $vida346 = (HEAP32[$player >> 2] | 0) + 36 | 0;
+      $sub349 = (HEAP32[$vida346 >> 2] | 0) - $13 | 0;
+      HEAP32[$vida346 >> 2] = $sub349;
+      if (!$sub349) {
+       $call354 = __ZNSt3__2lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(60552, 22086) | 0;
+       __ZNKSt3__28ios_base6getlocEv($jugador0Colision343$byval_copy, $call354 + (HEAP32[(HEAP32[$call354 >> 2] | 0) + -12 >> 2] | 0) | 0);
+       $call$i1$i117 = __ZNKSt3__26locale9use_facetERNS0_2idE($jugador0Colision343$byval_copy, 61424) | 0;
        $call$i2$i120 = FUNCTION_TABLE_iii[HEAP32[(HEAP32[$call$i1$i117 >> 2] | 0) + 28 >> 2] & 31]($call$i1$i117, 10) | 0;
-       __ZNSt3__26localeD2Ev($jugador0Colision334$byval_copy);
-       __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE3putEc($call345, $call$i2$i120) | 0;
-       __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE5flushEv($call345) | 0;
+       __ZNSt3__26localeD2Ev($jugador0Colision343$byval_copy);
+       __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE3putEc($call354, $call$i2$i120) | 0;
+       __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE5flushEv($call354) | 0;
        HEAP32[(HEAP32[$penemigo >> 2] | 0) + 36 >> 2] = 1e3;
-       $vida348 = (HEAP32[$player >> 2] | 0) + 36 | 0;
-       HEAP32[$vida348 >> 2] = (HEAP32[$vida348 >> 2] | 0) + 1e3;
+       $vida357 = (HEAP32[$player >> 2] | 0) + 36 | 0;
+       HEAP32[$vida357 >> 2] = (HEAP32[$vida357 >> 2] | 0) + 1e3;
       }
-      $call351 = __ZNSt3__2lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(60552, 22118) | 0;
-      __ZNKSt3__28ios_base6getlocEv($jugador0Colision334$byval_copy, $call351 + (HEAP32[(HEAP32[$call351 >> 2] | 0) + -12 >> 2] | 0) | 0);
-      $call$i1$i125 = __ZNKSt3__26locale9use_facetERNS0_2idE($jugador0Colision334$byval_copy, 61424) | 0;
+      $call360 = __ZNSt3__2lsINS_11char_traitsIcEEEERNS_13basic_ostreamIcT_EES6_PKc(60552, 22118) | 0;
+      __ZNKSt3__28ios_base6getlocEv($jugador0Colision343$byval_copy, $call360 + (HEAP32[(HEAP32[$call360 >> 2] | 0) + -12 >> 2] | 0) | 0);
+      $call$i1$i125 = __ZNKSt3__26locale9use_facetERNS0_2idE($jugador0Colision343$byval_copy, 61424) | 0;
       $call$i2$i128 = FUNCTION_TABLE_iii[HEAP32[(HEAP32[$call$i1$i125 >> 2] | 0) + 28 >> 2] & 31]($call$i1$i125, 10) | 0;
-      __ZNSt3__26localeD2Ev($jugador0Colision334$byval_copy);
-      __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE3putEc($call351, $call$i2$i128) | 0;
-      __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE5flushEv($call351) | 0;
-      HEAP32[$Lifespown280 >> 2] = 0;
-      HEAP8[$activo272 >> 0] = 0;
+      __ZNSt3__26localeD2Ev($jugador0Colision343$byval_copy);
+      __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE3putEc($call360, $call$i2$i128) | 0;
+      __ZNSt3__213basic_ostreamIcNS_11char_traitsIcEEE5flushEv($call360) | 0;
+      HEAP32[$Lifespown284 >> 2] = 0;
+      HEAP8[$activo276 >> 0] = 0;
      }
     }
-    $i266$0148 = $i266$0148 + 1 | 0;
-   } while ($i266$0148 >>> 0 < 4);
+    $i270$0148 = $i270$0148 + 1 | 0;
+   } while ($i270$0148 >>> 0 < 4);
    HEAPF32[4361] = Math_fround(Math_fround(HEAPF32[4361]) + Math_fround(1.0));
    _EndDrawing();
   } while (!(_WindowShouldClose() | 0));
@@ -83839,10 +83843,9 @@ function _emscripten_glUniform1f$legalf32(a, b) {
  _emscripten_glUniform1f(a | 0, +b);
 }
 
-function dynCall_ii(index, a1) {
- index = index | 0;
- a1 = a1 | 0;
- return FUNCTION_TABLE_ii[index & 127](a1 | 0) | 0;
+function __ZNKSt3__26vectorIN4tson5LayerENS_9allocatorIS2_EEE8max_sizeEv($this) {
+ $this = $this | 0;
+ return 19522578;
 }
 
 function _strncpy($d, $s, $n) {
@@ -83868,14 +83871,15 @@ function __ZNKSt3__28numpunctIwE16do_thousands_sepEv($this) {
  $this = $this | 0;
  return HEAP32[$this + 12 >> 2] | 0;
 }
-function __ZNKSt3__26vectorIN4tson5LayerENS_9allocatorIS2_EEE8max_sizeEv($this) {
- $this = $this | 0;
- return 19522578;
-}
 
 function __ZNKSt3__26vectorIN4tson4TileENS_9allocatorIS2_EEE8max_sizeEv($this) {
  $this = $this | 0;
  return 14128181;
+}
+function dynCall_ii(index, a1) {
+ index = index | 0;
+ a1 = a1 | 0;
+ return FUNCTION_TABLE_ii[index & 127](a1 | 0) | 0;
 }
 
 function _strcpy($dest, $src) {
