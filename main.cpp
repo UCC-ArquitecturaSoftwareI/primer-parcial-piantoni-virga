@@ -6,9 +6,10 @@
 #include "clases/mapa.h"
 #include "clases/Enemigo.h"
 #include "clases/hud.h"
-#if defined(PLATFORM_WEB) // Para crear HTML5
+/*#if defined(PLATFORM_WEB) // Para crear HTML5
 #include <emscripten/emscripten.h>
 #endif
+ */
 
 
 //Variables globales
@@ -25,10 +26,10 @@ int main() {
     const int WindowWidth = 820;
     const int WindowHeigh = 840;
 
-#if defined(PLATFORM_WEB)  // Para versión Web.
+/*#if defined(PLATFORM_WEB)  // Para versión Web.
     emscripten_set_main_loop(w.UpdateDrawFrame, 0, 1);
 #else
-
+*/
     InitWindow(WindowWidth, WindowHeigh, "EL JUEGO");
 
     SetTargetFPS(60);
@@ -273,7 +274,7 @@ int main() {
 
 
     }
-#endif
+//#endif
 
 
 }
