@@ -44,10 +44,10 @@ int main() {
 
     menuInit();
     //Tamaño del jugador 0
-    Nave pnave(86.0, 40.0);
+    Nave pnave(86.0, 60.0);
 
     //Tamaño del jugador 1
-    Enemigo pnave1(86.0, 40.0);
+    Enemigo pnave1(86.0, 60.0);
 
 
 
@@ -179,7 +179,7 @@ int main() {
 
                 disparo[i].Lifespown++;
 
-                penemigo->jugador1Colision.x = penemigo->enemigo_pos.x;   // TODO: Change rectangle position to match player width.
+                penemigo->jugador1Colision.x = penemigo->enemigo_pos.x - ((pnave1.getWidth()) / 2);
                 penemigo->jugador1Colision.y = penemigo->enemigo_pos.y;
                 penemigo->jugador1Colision.width = pnave1.getWidth();
 
@@ -225,7 +225,7 @@ int main() {
 
                 disparo1[i].Lifespown++;
 
-                player->jugador0Colision.x = player->nave_pos.x;
+                player->jugador0Colision.x = player->nave_pos.x - ((pnave.getWidth()) / 2);
                 player->jugador0Colision.y = player->nave_pos.y;
                 player->jugador0Colision.width = pnave.getWidth();
 
