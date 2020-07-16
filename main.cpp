@@ -6,32 +6,20 @@
 #include "clases/mapa.h"
 #include "clases/Enemigo.h"
 #include "clases/hud.h"
-/*#if defined(PLATFORM_WEB) // Para crear HTML5
-#include <emscripten/emscripten.h>
-#endif
- */
+#include "clases/GameSettings.cpp"
 
 
 //Variables globales
 Mapa *mapa;
 Nave *player;
 Enemigo *penemigo;
-int isPlayerinMenu = 1;
 
 
+GameSettings* GameSettings::_instance = NULL;
 int main() {
-
-    const int MAXDISPAROSRED = 4;
-    const int MAXDISPAROSBLUE = 4;
-    const int WindowWidth = 820;
-    const int WindowHeigh = 840;
-
-/*#if defined(PLATFORM_WEB)  // Para versión Web.
-    emscripten_set_main_loop(w.UpdateDrawFrame, 0, 1);
-#else
-*/
-    InitWindow(WindowWidth, WindowHeigh, "EL JUEGO");
-
+    GameSettings *settings = GameSettings::getInstance();
+    settings->getInstance();
+    InitWindow(settings->getWidth(),settings->getHeight() , "EL JUEGO");
     SetTargetFPS(60);
 
 
@@ -47,17 +35,15 @@ int main() {
 
     //Tamaño del jugador 1
     Enemigo pnave1(86.0, 60.0);
-
-
-
+    
 
     //Inicializacion de disparos
 
-    Bala disparo[MAXDISPAROSRED];
-    Bala disparo1[MAXDISPAROSBLUE];
+    Bala disparo[settings->getMAXDISPAROSRED()];
+    Bala disparo1[settings->getMAXDISPAROSBLUE()];
 
 
-    for (int i = 0; i < MAXDISPAROSRED; i++) {
+    for (int i = 0; i < settings->getMAXDISPAROSRED(); i++) {
 
         //Disparos del Jugador numero 0
         disparo[i].position = player->getNavePos();
@@ -70,7 +56,7 @@ int main() {
 
     }
 
-    for (int i = 0; i < MAXDISPAROSBLUE; i++) {
+    for (int i = 0; i < settings->getMAXDISPAROSBLUE(); i++) {
 
         // Disparos del jugadores numero 1
         disparo1[i].position = penemigo->getEnemigoPos();
@@ -84,7 +70,7 @@ int main() {
 
     while (!WindowShouldClose()) {
 
-        if (isPlayerinMenu == 0) {
+        if (settings->getisPlayerinMenu() == 0) {
 
             // Movimiento del jugador1 con sus respectivas teclas.
             if (IsKeyDown(KEY_RIGHT)) {
@@ -111,26 +97,26 @@ int main() {
 
 
         BeginDrawing();
-        if (isPlayerinMenu == 1) {
+        if (settings->getisPlayerinMenu() == 1) {
             menuDraw();
             if (IsKeyPressed(KEY_SPACE)) {
-                isPlayerinMenu = 0;
+                settings->SetisPlayerinMenu(0);
             }
         } else {
             mapa->dibujar();
             player->draw();
             penemigo->draw();
             if (IsKeyPressed(KEY_TAB)) {
-                isPlayerinMenu = 1;
+                settings->SetisPlayerinMenu(1);
             }
         }
         //ClearBackground(BLACK);
 
-        if (isPlayerinMenu == 0) {
+        if (settings->getisPlayerinMenu() == 0) {
 
             //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA DEL JUGADOR 0
             if (IsKeyPressed(KEY_M)) {
-                for (int i = 0; i < MAXDISPAROSRED; i++) {
+                for (int i = 0; i < settings->getMAXDISPAROSRED(); i++) {
 
                     if (!disparo[i].activo) {
                         disparo[i].position = player->getNavePos();
@@ -143,7 +129,7 @@ int main() {
 
             //TRABAJO CON EL ESPACIO PARA CONFIGURAR LA BALA DEL JUGADOR 1
             if (IsKeyPressed(KEY_D)) {
-                for (int i = 0; i < MAXDISPAROSBLUE; i++) {
+                for (int i = 0; i < settings->getMAXDISPAROSBLUE(); i++) {
 
                     if (!disparo1[i].activo) {
                         disparo1[i].position = penemigo->getEnemigoPos();
@@ -171,7 +157,7 @@ int main() {
 
 
         // "FOR"para todas las intrucciones que tiene que realizar la bala del jugador 0.
-        for (int i = 0; i < MAXDISPAROSRED; i++) {
+        for (int i = 0; i < settings->getMAXDISPAROSRED(); i++) {
             if (disparo[i].activo) {
                 disparo[i].position.y -= 10;
 
@@ -217,7 +203,7 @@ int main() {
         }
 
         // "FOR" para todas las intrucciones que tiene que realizar la bala del jugador 1.
-        for (int i = 0; i < MAXDISPAROSBLUE; i++) {
+        for (int i = 0; i < settings->getMAXDISPAROSBLUE(); i++) {
             if (disparo1[i].activo) {
                 disparo1[i].position.y += 10;
 
