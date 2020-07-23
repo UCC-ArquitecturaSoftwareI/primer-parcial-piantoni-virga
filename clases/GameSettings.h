@@ -13,7 +13,7 @@ class GameSettings {
 
 public:
     static GameSettings* getInstance () {
-        if (_instance == nullptr)
+        if (_instance == nullptr )
             _instance = new GameSettings();
         return _instance;
     }

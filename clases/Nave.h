@@ -1,35 +1,38 @@
 /**
- * @title       Clase Nave
- * @file        Nave.h
- * @version     1.0
- * @author      Francisco Piantoni Vera
- * @author      Santos Jose Virga
+* @title       Clase Nave
+* @file        Nave.h
+* @version     1.0
+* @author      Francisco Piantoni Vera
+* @author      Santos Jose Virga
 */
-#include <raylib.h>
-#include <string>
+
 
 #ifndef RAYLIBTEMPLATE_NAVE_H
 #define RAYLIBTEMPLATE_NAVE_H
 
 
-class Nave {
+#include <raylib.h>
+#include <string>
+#include "rendering.h"
+#include "torpedo.h"
 
-    /**/
+class Nave {
 private:
     double length;
     double width;
-
+    float rot;
+    int vida;
 
 protected:
-    Texture2D nave;
-
-
+    std::string tNave;
+    rendering &renderer=rendering::get();
 public:
-    Nave(std::string text, const Vector2 &navePos);
-
-    int vida = 1000;
+    Nave(std::string text, const Vector2 &navePos, float r);
     bool active;
     Rectangle jugador0Colision;
+    Rectangle jugador1Colision;
+
+
 
     Nave(double, double);
 
@@ -37,17 +40,19 @@ public:
 
     double getWidth() const;
 
-
     void draw();
 
     void move_x(float d);
 
     void move_y(float d);
 
+    int getVida() const;
+
     const Vector2 &getNavePos() const;
 
     Vector2 nave_pos;
 
+    void disparar(std::list<torpedo> &disparos);
 };
 
 

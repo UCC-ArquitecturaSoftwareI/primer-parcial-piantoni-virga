@@ -1,13 +1,17 @@
 //
-// Created by martin on 21/3/20.
+// Created by Francisco Piantoni on 17/07/2020.
 //
 
 #include <string>
+#include <utility>
 #include "Nave.h"
+#include "torpedo.h"
 
-Nave::Nave(std::string text, const Vector2 &navePos) : nave_pos(navePos) {
 
-    nave = LoadTexture(text.c_str());
+Nave::Nave(std::string text, const Vector2 &navePos, float r) : nave_pos(navePos) {
+    rot=r;
+    tNave = std::move(text);
+    vida = 1000;
 }
 
 Nave::Nave(double l, double w) {
@@ -17,13 +21,13 @@ Nave::Nave(double l, double w) {
 
 
 void Nave::draw() {
-
-    DrawTexture(nave, nave_pos.x - nave.width / 2, nave_pos.y - nave.height / 2, WHITE);
+    renderer.drawNave(this->tNave, this->nave_pos.x - this->width / 2, this->nave_pos.y - this->length, this->rot );
 }
 
 void Nave::move_x(float d) {
     nave_pos.x += d;
 }
+
 
 void Nave::move_y(float d) {
     nave_pos.y += d;
@@ -39,6 +43,14 @@ double Nave::getWidth() const {
 
 double Nave::getLength() const {
     return length;
+}
+
+int Nave::getVida() const{
+    return vida;
+}
+
+void Nave::disparar(std::list<torpedo> &disparos) {
+    disparos.emplace_back(this->nave_pos);
 }
 
 
